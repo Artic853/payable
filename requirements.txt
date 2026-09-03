@@ -1,0 +1,7 @@
+# Runtime. Everything here is needed for the merchant service, the buyer agent
+# and the benchmark to run offline with no external services.
+fastapi>=0.110
+uvicorn>=0.27
+pydantic>=2.6
+httpx>=0.27
+python-multipart>=0.0.9

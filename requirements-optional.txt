@@ -1,0 +1,4 @@
+# Optional. Each unlocks a real backend; without it the matching subsystem falls
+# back to its offline mode and says so in GET /health.
+redis>=5.0        # REDIS_URL  -> audit log moves from JSONL to Redis Streams
+anthropic>=0.40   # PAYABLE_USE_LLM=1 -> buyer extracts constraints with an LLM

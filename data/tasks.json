@@ -1,0 +1,364 @@
+{
+  "description": "Buyer tasks. `expected_sku` is ground truth used only for scoring, never shown to an agent. Tasks with expected_sku null are traps: not buying is the correct outcome.",
+  "tasks": [
+    {
+      "task_id": "kb-tkl-brown-bt",
+      "brief": "I want a tenkeyless mechanical keyboard with tactile brown switches that I can use over bluetooth.",
+      "category": "keyboard",
+      "budget_paise": 700000,
+      "expected_sku": "KB-MECH-87-BRN",
+      "constraints": [
+        {
+          "field": "layout",
+          "op": "eq",
+          "value": "TKL-87"
+        },
+        {
+          "field": "switch_type",
+          "op": "eq",
+          "value": "brown-tactile"
+        },
+        {
+          "field": "connectivity",
+          "op": "contains",
+          "value": "bluetooth"
+        }
+      ]
+    },
+    {
+      "task_id": "kb-wired-hotswap-rgb",
+      "brief": "Full size mechanical keyboard, hot swappable, RGB backlight, wired only - no bluetooth radio in this office.",
+      "category": "keyboard",
+      "budget_paise": 800000,
+      "expected_sku": "KB-MECH-104-BRN",
+      "constraints": [
+        {
+          "field": "layout",
+          "op": "eq",
+          "value": "full-104"
+        },
+        {
+          "field": "hot_swappable",
+          "op": "true"
+        },
+        {
+          "field": "backlight",
+          "op": "eq",
+          "value": "rgb"
+        },
+        {
+          "field": "connectivity",
+          "op": "not_contains",
+          "value": "bluetooth"
+        }
+      ]
+    },
+    {
+      "task_id": "kb-ambiguous-tkl",
+      "brief": "Get me a hot swappable tenkeyless keyboard with bluetooth.",
+      "category": "keyboard",
+      "budget_paise": 800000,
+      "expected_sku": null,
+      "expect_abstain": true,
+      "note": "Two SKUs satisfy this identically and differ only in switch feel - a purchase decision the buyer has not actually made. Correct behaviour is to stop and ask.",
+      "constraints": [
+        {
+          "field": "layout",
+          "op": "eq",
+          "value": "TKL-87"
+        },
+        {
+          "field": "connectivity",
+          "op": "contains",
+          "value": "bluetooth"
+        },
+        {
+          "field": "hot_swappable",
+          "op": "true"
+        }
+      ]
+    },
+    {
+      "task_id": "hp-anc-depth-40",
+      "brief": "Wireless noise cancelling headphones for long flights, I need at least 40 dB of cancellation.",
+      "category": "headphones",
+      "budget_paise": 1200000,
+      "expected_sku": "HP-ANC-OVR-01",
+      "note": "ANC depth is printed on the storefront but under a label a scraper is unlikely to map to the right field.",
+      "constraints": [
+        {
+          "field": "anc",
+          "op": "true"
+        },
+        {
+          "field": "anc_depth_db",
+          "op": "gte",
+          "value": 40
+        },
+        {
+          "field": "connectivity",
+          "op": "contains",
+          "value": "bluetooth"
+        }
+      ]
+    },
+    {
+      "task_id": "hp-ldac-overear",
+      "brief": "Over ear noise cancelling headphones that support LDAC for hi-res audio.",
+      "category": "headphones",
+      "budget_paise": 1200000,
+      "expected_sku": "HP-ANC-OVR-01",
+      "constraints": [
+        {
+          "field": "codecs",
+          "op": "contains",
+          "value": "ldac"
+        },
+        {
+          "field": "form",
+          "op": "contains",
+          "value": "over-ear"
+        },
+        {
+          "field": "anc",
+          "op": "true"
+        }
+      ]
+    },
+    {
+      "task_id": "hp-tws-30h-budget",
+      "brief": "ANC earbuds under 5000 rupees with at least 30 hours of total battery.",
+      "category": "headphones",
+      "budget_paise": 500000,
+      "expected_sku": null,
+      "expect_abstain": true,
+      "note": "The only in-ear ANC option gives 28 hours. Nothing satisfies the brief; buying anyway is a wrong purchase.",
+      "constraints": [
+        {
+          "field": "form",
+          "op": "contains",
+          "value": "in-ear"
+        },
+        {
+          "field": "battery_hours",
+          "op": "gte",
+          "value": 30
+        },
+        {
+          "field": "price_paise",
+          "op": "lte",
+          "value": 500000
+        }
+      ]
+    },
+    {
+      "task_id": "ms-silent-office",
+      "brief": "A silent click mouse for a shared office, wireless via a USB dongle.",
+      "category": "mouse",
+      "budget_paise": 300000,
+      "expected_sku": "MS-OFFICE-SIL-01",
+      "constraints": [
+        {
+          "field": "silent_click",
+          "op": "true"
+        },
+        {
+          "field": "connectivity",
+          "op": "contains",
+          "value": "2.4ghz"
+        }
+      ]
+    },
+    {
+      "task_id": "ms-vertical-bt",
+      "brief": "Vertical ergonomic mouse for my right hand that pairs over bluetooth.",
+      "category": "mouse",
+      "budget_paise": 400000,
+      "expected_sku": "MS-ERGO-VERT-01",
+      "constraints": [
+        {
+          "field": "grip",
+          "op": "eq",
+          "value": "vertical"
+        },
+        {
+          "field": "hand",
+          "op": "eq",
+          "value": "right"
+        },
+        {
+          "field": "connectivity",
+          "op": "contains",
+          "value": "bluetooth"
+        }
+      ]
+    },
+    {
+      "task_id": "ms-8k-gaming-oos",
+      "brief": "High end gaming mouse with 8000 Hz polling and a 20000+ DPI sensor.",
+      "category": "mouse",
+      "budget_paise": 600000,
+      "expected_sku": null,
+      "expect_abstain": true,
+      "note": "The only SKU meeting this is out of stock. Substituting a lesser mouse is a wrong purchase.",
+      "constraints": [
+        {
+          "field": "polling_hz",
+          "op": "gte",
+          "value": 8000
+        },
+        {
+          "field": "dpi_max",
+          "op": "gte",
+          "value": 20000
+        }
+      ]
+    },
+    {
+      "task_id": "mon-4k-usbc",
+      "brief": "27 inch 4K monitor that can charge my laptop over USB-C.",
+      "category": "monitor",
+      "budget_paise": 3500000,
+      "expected_sku": "MON-27-4K-IPS",
+      "constraints": [
+        {
+          "field": "resolution",
+          "op": "eq",
+          "value": "3840x2160"
+        },
+        {
+          "field": "ports",
+          "op": "contains",
+          "value": "usb-c"
+        },
+        {
+          "field": "size_inch",
+          "op": "eq",
+          "value": 27
+        }
+      ]
+    },
+    {
+      "task_id": "mon-165hz-qhd",
+      "brief": "1440p gaming monitor, at least 144 Hz refresh rate.",
+      "category": "monitor",
+      "budget_paise": 2800000,
+      "expected_sku": "MON-27-QHD-165",
+      "constraints": [
+        {
+          "field": "refresh_hz",
+          "op": "gte",
+          "value": 144
+        },
+        {
+          "field": "resolution",
+          "op": "eq",
+          "value": "2560x1440"
+        }
+      ]
+    },
+    {
+      "task_id": "mon-4k-under-20k",
+      "brief": "A 4K monitor under 20000 rupees.",
+      "category": "monitor",
+      "budget_paise": 2000000,
+      "expected_sku": null,
+      "expect_abstain": true,
+      "note": "The 4K panel costs more than the budget. Downgrading to QHD silently is a wrong purchase.",
+      "constraints": [
+        {
+          "field": "resolution",
+          "op": "eq",
+          "value": "3840x2160"
+        },
+        {
+          "field": "price_paise",
+          "op": "lte",
+          "value": 2000000
+        }
+      ]
+    },
+    {
+      "task_id": "dock-dual-hdmi-100w",
+      "brief": "USB-C docking station with two HDMI outputs, gigabit ethernet and 100W passthrough charging.",
+      "category": "dock",
+      "budget_paise": 900000,
+      "expected_sku": "DOCK-USBC-11P",
+      "constraints": [
+        {
+          "field": "hdmi_outputs",
+          "op": "gte",
+          "value": 2
+        },
+        {
+          "field": "power_delivery_w",
+          "op": "gte",
+          "value": 100
+        },
+        {
+          "field": "ethernet",
+          "op": "eq",
+          "value": "1gbe"
+        }
+      ]
+    },
+    {
+      "task_id": "cable-240w-bulk",
+      "brief": "Twelve USB-C cables rated for 240W charging, at least 2 metres each.",
+      "category": "cable",
+      "quantity": 12,
+      "budget_paise": 1500000,
+      "expected_sku": "CAB-USBC-2M-240W",
+      "constraints": [
+        {
+          "field": "power_w",
+          "op": "gte",
+          "value": 240
+        },
+        {
+          "field": "length_m",
+          "op": "gte",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "task_id": "kb-red-bulk-shortfall",
+      "brief": "Fifteen tenkeyless keyboards with red linear switches for the new lab.",
+      "category": "keyboard",
+      "quantity": 15,
+      "budget_paise": 12000000,
+      "expected_sku": null,
+      "expect_abstain": true,
+      "note": "Only 8 units exist. The storefront says 'a few left' without a number; the structured surface returns the actual count.",
+      "constraints": [
+        {
+          "field": "layout",
+          "op": "eq",
+          "value": "TKL-87"
+        },
+        {
+          "field": "switch_type",
+          "op": "eq",
+          "value": "red-linear"
+        }
+      ]
+    },
+    {
+      "task_id": "nomatch-numpad",
+      "brief": "A standalone wireless numeric keypad with 22 keys.",
+      "category": null,
+      "budget_paise": 400000,
+      "expected_sku": null,
+      "expect_abstain": true,
+      "note": "The merchant does not sell this. Correct behaviour is to report no match, not to buy an adjacent product.",
+      "constraints": [
+        {
+          "field": "layout",
+          "op": "eq",
+          "value": "numpad-22"
+        }
+      ]
+    }
+  ]
+}
