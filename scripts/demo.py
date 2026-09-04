@@ -20,7 +20,7 @@ from payable.agent import BuyerIntent, BuyerPolicy, PayableBuyer  # noqa: E402
 from payable.audit import AUDIT  # noqa: E402
 from payable.bench.runner import make_client  # noqa: E402
 from payable.config import SETTINGS  # noqa: E402
-from payable.mandate import issue_mandate  # noqa: E402
+from payable.mandate import KEYRING, issue_mandate  # noqa: E402
 from payable.models import SpecConstraint  # noqa: E402
 from payable.payments import set_gateway  # noqa: E402
 from payable.payments.simulated import SimulatedRazorpayGateway  # noqa: E402
@@ -97,10 +97,16 @@ def main() -> None:
     )
     heading("MANDATE ISSUED BY THE PRINCIPAL")
     print(f"  mandate_id   {mandate.mandate_id}")
+    print(f"  principal    {mandate.principal}")
     print(f"  cap          INR {mandate.max_amount_paise / 100:,.2f}")
     print(f"  scope        {mandate.allowed_categories or 'any category'}")
-    print(f"  signature    {mandate.signature[:32]}...")
-    print("  (the merchant re-verifies this server-side before any order exists)")
+    print(f"  algorithm    {mandate.alg}")
+    print(f"  signature    {mandate.signature[:48]}...")
+    public_key = KEYRING.export_public_keys().get(mandate.principal)
+    if public_key:
+        print(f"  merchant has {public_key[:48]}...  (public key only)")
+    print("  The merchant re-verifies signature, expiry, cap and scope before an")
+    print("  order exists -- and holds no key that could mint this mandate.")
 
     result = PayableBuyer(client, policy=BuyerPolicy.strict()).run(intent, mandate=mandate)
 

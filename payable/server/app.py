@@ -23,7 +23,7 @@ from ..audit import AUDIT
 from ..catalog import CATALOG
 from ..commerce import COMMERCE, CommerceError
 from ..config import SETTINGS
-from ..mandate import issue_mandate
+from ..mandate import ALG_ED25519, ALG_HMAC, ED25519_AVAILABLE, KEYRING, issue_mandate
 from ..models import Mandate, SearchRequest
 from . import mcp_http
 from .legacy import router as legacy_router
@@ -66,12 +66,21 @@ def payable_manifest() -> dict:
         },
         "authorization": {
             "scheme": "signed-mandate",
-            "algorithm": "HMAC-SHA256",
+            "algorithm": ALG_ED25519 if ED25519_AVAILABLE else ALG_HMAC,
+            "supported_algorithms": (
+                [ALG_ED25519, ALG_HMAC] if ED25519_AVAILABLE else [ALG_HMAC]
+            ),
             "required_fields": [
                 "mandate_id", "principal", "agent_id", "max_amount_paise",
-                "allowed_categories", "issued_at", "expires_at", "signature",
+                "allowed_categories", "issued_at", "expires_at", "alg", "signature",
             ],
             "verified": ["signature", "expiry", "amount_cap", "category_scope"],
+            "key_registry": f"{SETTINGS.base_url}/api/principals",
+            "notes": (
+                "The merchant holds only public keys, so a merchant compromise "
+                "cannot mint mandates. A principal with a registered public key "
+                "may not fall back to the symmetric algorithm."
+            ),
         },
         "guarantees": {
             "quote_ttl_seconds": 120,
@@ -226,7 +235,8 @@ def api_issue_mandate(payload: dict = Body(default={})) -> dict:
     """Dev convenience: mint a signed mandate.
 
     In production the principal's own wallet or bank issues this, never the
-    merchant. It lives here so the demo has one moving part fewer.
+    merchant -- the merchant would never hold the private key. It lives here so
+    the demo has one moving part fewer.
     """
     mandate = issue_mandate(
         principal=payload.get("principal", "user:demo"),
@@ -236,6 +246,46 @@ def api_issue_mandate(payload: dict = Body(default={})) -> dict:
         ttl_seconds=int(payload.get("ttl_seconds", 900)),
     )
     return mandate.model_dump()
+
+
+@app.get("/api/principals", tags=["authorization"])
+def api_principals() -> dict:
+    """Public keys the merchant will verify mandates against.
+
+    Public halves only. Nothing here confers the ability to sign.
+    """
+    return {
+        "algorithm": ALG_ED25519 if ED25519_AVAILABLE else ALG_HMAC,
+        "principals": [
+            {"principal": principal, "public_key": key, "alg": ALG_ED25519}
+            for principal, key in sorted(KEYRING.export_public_keys().items())
+        ],
+    }
+
+
+@app.post("/api/principals", tags=["authorization"])
+def api_enrol_principal(payload: dict = Body(...)) -> dict:
+    """Enrol a principal's public key with the merchant.
+
+    Either register a key the principal generated (`public_key`), or -- for the
+    demo only -- have the keyring generate the pair.
+    """
+    principal = payload.get("principal")
+    if not principal:
+        raise HTTPException(status_code=400, detail="principal is required")
+
+    public_key = payload.get("public_key")
+    if public_key:
+        try:
+            KEYRING.register_public_key(principal, public_key)
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail=f"malformed public key: {exc}")
+    else:
+        if not ED25519_AVAILABLE:
+            raise HTTPException(status_code=501, detail="Ed25519 unavailable on this server")
+        public_key = KEYRING.enrol(principal)
+
+    return {"principal": principal, "public_key": public_key, "alg": ALG_ED25519}
 
 
 # --------------------------------------------------------------------------

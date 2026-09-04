@@ -193,14 +193,20 @@ class Mandate(BaseModel):
     currency: str = "INR"
     issued_at: float
     expires_at: float
+    alg: Literal["Ed25519", "HMAC-SHA256"] = "Ed25519"
     signature: str = ""
 
     def signing_payload(self) -> str:
+        """Canonical bytes covered by the signature.
+
+        `alg` is inside the payload so a mandate cannot be replayed under a
+        different algorithm than the one its principal chose.
+        """
         cats = ",".join(sorted(self.allowed_categories))
         return "|".join([
             self.mandate_id, self.principal, self.agent_id,
             str(self.max_amount_paise), cats, self.currency,
-            f"{self.issued_at:.0f}", f"{self.expires_at:.0f}",
+            f"{self.issued_at:.0f}", f"{self.expires_at:.0f}", self.alg,
         ])
 
 

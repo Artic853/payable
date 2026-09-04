@@ -9,7 +9,9 @@
     "razorpay_account_ref": "acc_TEST_bharatperipherals",
     "support_email": "orders@bharatperipherals.example",
     "return_window_days": 7,
-    "ships_to": ["IN"]
+    "ships_to": [
+      "IN"
+    ]
   },
   "products": [
     {
@@ -23,7 +25,10 @@
       "specs": {
         "layout": "TKL-87",
         "switch_type": "brown-tactile",
-        "connectivity": ["usb-c-wired", "bluetooth-5.0"],
+        "connectivity": [
+          "usb-c-wired",
+          "bluetooth-5.0"
+        ],
         "hot_swappable": true,
         "backlight": "rgb",
         "keycap_profile": "cherry-pbt",
@@ -31,7 +36,12 @@
         "weight_g": 780,
         "warranty_months": 24
       },
-      "tags": ["mechanical", "tkl", "wireless", "hot-swap"]
+      "tags": [
+        "mechanical",
+        "tkl",
+        "wireless",
+        "hot-swap"
+      ]
     },
     {
       "sku": "KB-MECH-87-RED",
@@ -44,7 +54,10 @@
       "specs": {
         "layout": "TKL-87",
         "switch_type": "red-linear",
-        "connectivity": ["usb-c-wired", "bluetooth-5.0"],
+        "connectivity": [
+          "usb-c-wired",
+          "bluetooth-5.0"
+        ],
         "hot_swappable": true,
         "backlight": "rgb",
         "keycap_profile": "cherry-pbt",
@@ -52,7 +65,12 @@
         "weight_g": 780,
         "warranty_months": 24
       },
-      "tags": ["mechanical", "tkl", "wireless", "hot-swap"]
+      "tags": [
+        "mechanical",
+        "tkl",
+        "wireless",
+        "hot-swap"
+      ]
     },
     {
       "sku": "KB-MECH-104-BRN",
@@ -65,7 +83,9 @@
       "specs": {
         "layout": "full-104",
         "switch_type": "brown-tactile",
-        "connectivity": ["usb-c-wired"],
+        "connectivity": [
+          "usb-c-wired"
+        ],
         "hot_swappable": true,
         "backlight": "rgb",
         "keycap_profile": "cherry-pbt",
@@ -73,7 +93,12 @@
         "weight_g": 1120,
         "warranty_months": 24
       },
-      "tags": ["mechanical", "full-size", "wired", "hot-swap"]
+      "tags": [
+        "mechanical",
+        "full-size",
+        "wired",
+        "hot-swap"
+      ]
     },
     {
       "sku": "KB-MEMB-104-BLK",
@@ -86,7 +111,9 @@
       "specs": {
         "layout": "full-104",
         "switch_type": "membrane",
-        "connectivity": ["usb-a-wired"],
+        "connectivity": [
+          "usb-a-wired"
+        ],
         "hot_swappable": false,
         "backlight": "none",
         "keycap_profile": "abs",
@@ -94,7 +121,11 @@
         "weight_g": 640,
         "warranty_months": 12
       },
-      "tags": ["membrane", "budget", "full-size"]
+      "tags": [
+        "membrane",
+        "budget",
+        "full-size"
+      ]
     },
     {
       "sku": "MS-ERGO-VERT-01",
@@ -108,13 +139,20 @@
         "grip": "vertical",
         "dpi_max": 4000,
         "buttons": 6,
-        "connectivity": ["2.4ghz-dongle", "bluetooth-5.0"],
+        "connectivity": [
+          "2.4ghz-dongle",
+          "bluetooth-5.0"
+        ],
         "hand": "right",
         "battery_mah": 800,
         "weight_g": 105,
         "warranty_months": 12
       },
-      "tags": ["ergonomic", "wireless", "vertical"]
+      "tags": [
+        "ergonomic",
+        "wireless",
+        "vertical"
+      ]
     },
     {
       "sku": "MS-GAME-8K-01",
@@ -128,14 +166,21 @@
         "grip": "claw",
         "dpi_max": 26000,
         "buttons": 8,
-        "connectivity": ["usb-c-wired", "2.4ghz-dongle"],
+        "connectivity": [
+          "usb-c-wired",
+          "2.4ghz-dongle"
+        ],
         "hand": "right",
         "polling_hz": 8000,
         "battery_mah": 500,
         "weight_g": 58,
         "warranty_months": 24
       },
-      "tags": ["gaming", "lightweight", "8khz"]
+      "tags": [
+        "gaming",
+        "lightweight",
+        "8khz"
+      ]
     },
     {
       "sku": "MS-OFFICE-SIL-01",
@@ -149,14 +194,20 @@
         "grip": "palm",
         "dpi_max": 1600,
         "buttons": 3,
-        "connectivity": ["2.4ghz-dongle"],
+        "connectivity": [
+          "2.4ghz-dongle"
+        ],
         "hand": "ambidextrous",
         "battery_mah": 0,
         "weight_g": 72,
         "warranty_months": 12,
         "silent_click": true
       },
-      "tags": ["office", "silent", "budget"]
+      "tags": [
+        "office",
+        "silent",
+        "budget"
+      ]
     },
     {
       "sku": "HP-ANC-OVR-01",
@@ -170,14 +221,27 @@
         "form": "over-ear",
         "anc": true,
         "anc_depth_db": 42,
-        "connectivity": ["bluetooth-5.3", "usb-c-wired", "3.5mm"],
+        "connectivity": [
+          "bluetooth-5.3",
+          "usb-c-wired",
+          "3.5mm"
+        ],
         "battery_hours": 55,
-        "codecs": ["sbc", "aac", "ldac"],
+        "codecs": [
+          "sbc",
+          "aac",
+          "ldac"
+        ],
         "mic": "dual-beamforming",
         "weight_g": 268,
         "warranty_months": 24
       },
-      "tags": ["anc", "over-ear", "ldac", "travel"]
+      "tags": [
+        "anc",
+        "over-ear",
+        "ldac",
+        "travel"
+      ]
     },
     {
       "sku": "HP-ANC-TWS-01",
@@ -191,14 +255,23 @@
         "form": "in-ear-tws",
         "anc": true,
         "anc_depth_db": 32,
-        "connectivity": ["bluetooth-5.3"],
+        "connectivity": [
+          "bluetooth-5.3"
+        ],
         "battery_hours": 28,
-        "codecs": ["sbc", "aac"],
+        "codecs": [
+          "sbc",
+          "aac"
+        ],
         "mic": "dual-beamforming",
         "weight_g": 48,
         "warranty_months": 12
       },
-      "tags": ["anc", "tws", "compact"]
+      "tags": [
+        "anc",
+        "tws",
+        "compact"
+      ]
     },
     {
       "sku": "HP-OPEN-WIRED-01",
@@ -211,14 +284,21 @@
       "specs": {
         "form": "over-ear-open",
         "anc": false,
-        "connectivity": ["3.5mm", "6.35mm"],
+        "connectivity": [
+          "3.5mm",
+          "6.35mm"
+        ],
         "impedance_ohm": 250,
         "battery_hours": 0,
         "mic": "none",
         "weight_g": 320,
         "warranty_months": 24
       },
-      "tags": ["open-back", "studio", "wired"]
+      "tags": [
+        "open-back",
+        "studio",
+        "wired"
+      ]
     },
     {
       "sku": "MON-27-4K-IPS",
@@ -233,12 +313,20 @@
         "resolution": "3840x2160",
         "panel": "ips",
         "refresh_hz": 60,
-        "ports": ["hdmi-2.0", "displayport-1.4", "usb-c-90w"],
+        "ports": [
+          "hdmi-2.0",
+          "displayport-1.4",
+          "usb-c-90w"
+        ],
         "hdr": "hdr400",
         "vesa": "100x100",
         "warranty_months": 36
       },
-      "tags": ["4k", "usb-c", "productivity"]
+      "tags": [
+        "4k",
+        "usb-c",
+        "productivity"
+      ]
     },
     {
       "sku": "MON-27-QHD-165",
@@ -253,12 +341,19 @@
         "resolution": "2560x1440",
         "panel": "fast-ips",
         "refresh_hz": 165,
-        "ports": ["hdmi-2.0", "displayport-1.4"],
+        "ports": [
+          "hdmi-2.0",
+          "displayport-1.4"
+        ],
         "hdr": "hdr400",
         "vesa": "100x100",
         "warranty_months": 36
       },
-      "tags": ["qhd", "165hz", "gaming"]
+      "tags": [
+        "qhd",
+        "165hz",
+        "gaming"
+      ]
     },
     {
       "sku": "DOCK-USBC-11P",
@@ -277,7 +372,11 @@
         "sd_reader": true,
         "warranty_months": 24
       },
-      "tags": ["dock", "usb-c", "dual-display"]
+      "tags": [
+        "dock",
+        "usb-c",
+        "dual-display"
+      ]
     },
     {
       "sku": "CAB-USBC-2M-240W",
@@ -295,7 +394,226 @@
         "braided": true,
         "warranty_months": 12
       },
-      "tags": ["cable", "240w", "thunderbolt-compatible"]
+      "tags": [
+        "cable",
+        "240w",
+        "thunderbolt-compatible"
+      ]
+    },
+    {
+      "sku": "CAM-1080-30",
+      "name": "Lumen 1080p Webcam",
+      "category": "webcam",
+      "brand": "Lumen",
+      "price_paise": 249000,
+      "mrp_paise": 329000,
+      "stock": 55,
+      "specs": {
+        "resolution_p": 1080,
+        "fps": 30,
+        "fov_deg": 78,
+        "autofocus": true,
+        "mic_builtin": true,
+        "connectivity": [
+          "usb-a-wired"
+        ],
+        "privacy_shutter": true,
+        "hdr": false,
+        "warranty_months": 12
+      },
+      "tags": [
+        "webcam",
+        "1080p",
+        "plug-and-play"
+      ]
+    },
+    {
+      "sku": "CAM-4K-60",
+      "name": "Lumen 4K Pro Webcam",
+      "category": "webcam",
+      "brand": "Lumen",
+      "price_paise": 899000,
+      "mrp_paise": 1149000,
+      "stock": 18,
+      "specs": {
+        "resolution_p": 2160,
+        "fps": 60,
+        "fov_deg": 90,
+        "autofocus": true,
+        "mic_builtin": true,
+        "connectivity": [
+          "usb-c-wired"
+        ],
+        "privacy_shutter": true,
+        "hdr": true,
+        "warranty_months": 24
+      },
+      "tags": [
+        "webcam",
+        "4k",
+        "streaming",
+        "hdr"
+      ]
+    },
+    {
+      "sku": "MIC-USB-CARD",
+      "name": "Vocal USB Cardioid Microphone",
+      "category": "microphone",
+      "brand": "Vocal",
+      "price_paise": 599000,
+      "mrp_paise": 749000,
+      "stock": 30,
+      "specs": {
+        "connector_type": "usb-c",
+        "polar_pattern": "cardioid",
+        "sample_rate_khz": 48,
+        "phantom_power": false,
+        "monitoring": true,
+        "boom_arm": false,
+        "warranty_months": 24
+      },
+      "tags": [
+        "microphone",
+        "usb",
+        "podcast"
+      ]
+    },
+    {
+      "sku": "MIC-XLR-COND",
+      "name": "Vocal XLR Condenser Microphone",
+      "category": "microphone",
+      "brand": "Vocal",
+      "price_paise": 949000,
+      "mrp_paise": 1199000,
+      "stock": 12,
+      "specs": {
+        "connector_type": "xlr",
+        "polar_pattern": "cardioid",
+        "sample_rate_khz": 0,
+        "phantom_power": true,
+        "monitoring": false,
+        "boom_arm": false,
+        "warranty_months": 24
+      },
+      "tags": [
+        "microphone",
+        "xlr",
+        "studio",
+        "condenser"
+      ]
+    },
+    {
+      "sku": "SSD-1TB-NVME",
+      "name": "Flux Portable NVMe SSD 1TB",
+      "category": "storage",
+      "brand": "Flux",
+      "price_paise": 749000,
+      "mrp_paise": 929000,
+      "stock": 40,
+      "specs": {
+        "capacity_gb": 1000,
+        "read_mbps": 1050,
+        "write_mbps": 1000,
+        "interface": "usb-c-3.2g2",
+        "encryption": "aes-256",
+        "shock_rated": true,
+        "warranty_months": 36
+      },
+      "tags": [
+        "ssd",
+        "portable",
+        "nvme"
+      ]
+    },
+    {
+      "sku": "SSD-2TB-NVME",
+      "name": "Flux Portable NVMe SSD 2TB",
+      "category": "storage",
+      "brand": "Flux",
+      "price_paise": 1299000,
+      "mrp_paise": 1599000,
+      "stock": 22,
+      "specs": {
+        "capacity_gb": 2000,
+        "read_mbps": 2000,
+        "write_mbps": 1900,
+        "interface": "usb-c-3.2g2x2",
+        "encryption": "aes-256",
+        "shock_rated": true,
+        "warranty_months": 36
+      },
+      "tags": [
+        "ssd",
+        "portable",
+        "nvme",
+        "fast"
+      ]
+    },
+    {
+      "sku": "STAND-ALU-ADJ",
+      "name": "Rise Adjustable Aluminium Laptop Stand",
+      "category": "stand",
+      "brand": "Rise",
+      "price_paise": 299000,
+      "mrp_paise": 399000,
+      "stock": 70,
+      "specs": {
+        "material": "aluminium",
+        "adjustable": true,
+        "max_load_kg": 8,
+        "foldable": true,
+        "height_levels": 6,
+        "warranty_months": 12
+      },
+      "tags": [
+        "stand",
+        "ergonomic",
+        "aluminium"
+      ]
+    },
+    {
+      "sku": "HUB-USBA-4P",
+      "name": "Aether 4-Port USB-A 3.0 Hub",
+      "category": "hub",
+      "brand": "Aether",
+      "price_paise": 129000,
+      "mrp_paise": 179000,
+      "stock": 120,
+      "specs": {
+        "ports_total": 4,
+        "port_type": "usb-a-3.0",
+        "powered": false,
+        "data_gbps": 5,
+        "cable_length_m": 0.3,
+        "warranty_months": 12
+      },
+      "tags": [
+        "hub",
+        "usb-a",
+        "compact"
+      ]
+    },
+    {
+      "sku": "KVM-2P-4K",
+      "name": "Switchbox 2-Port 4K KVM Switch",
+      "category": "kvm",
+      "brand": "Switchbox",
+      "price_paise": 449000,
+      "mrp_paise": 589000,
+      "stock": 16,
+      "specs": {
+        "inputs": 2,
+        "max_resolution": "3840x2160",
+        "refresh_hz": 60,
+        "hotkey_switching": true,
+        "usb_peripheral_ports": 2,
+        "warranty_months": 24
+      },
+      "tags": [
+        "kvm",
+        "4k",
+        "dual-pc"
+      ]
     }
   ]
 }

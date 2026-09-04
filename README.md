@@ -1,5 +1,8 @@
 # Payable
 
+[![CI](https://github.com/Artic853/payable/actions/workflows/ci.yml/badge.svg)](https://github.com/Artic853/payable/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 **A merchant's transactability layer for AI buyers.**
 
 A Razorpay merchant's catalog, wrapped in an interface an AI agent can actually
@@ -13,24 +16,41 @@ Then the part that matters — a benchmark that measures whether any of it works
 
 ## The result
 
-16 buyer tasks, run against three merchant surfaces. Same tasks, same catalog,
-same prices, same seeded payment declines.
+29 buyer tasks against a 23-SKU catalog, run on three merchant surfaces and
+repeated across 5 payment seeds. Same tasks, same catalog, same prices, same
+seeded declines in every arm.
+
+Mean ± standard deviation across seeds, with the range in brackets:
 
 | Arm | Txn success | Wrong-item rate | Decision accuracy | Money misspent |
 |---|---|---|---|---|
-| **`payable`** — structured MCP surface, cautious agent | **100.0%** | **0.0%** | **100.0%** | **₹0** |
-| `legacy-strict` — HTML storefront, same cautious agent | 60.0% | 14.3% | 68.8% | ₹6,478 |
-| `legacy-optimistic` — HTML storefront, agent that proceeds when unsure | 80.0% | 27.3% | 75.0% | ₹14,912 |
+| **`payable`** — structured MCP surface, cautious agent | **94.7% ± 6.5** <br><sub>84–100</sub> | **0.0% ± 0.0** <br><sub>0–0</sub> | **96.6% ± 4.2** <br><sub>90–100</sub> | **₹0** |
+| `legacy-strict` — HTML storefront, same cautious agent | 49.5% ± 2.9 <br><sub>47–53</sub> | 7.6% ± 4.3 <br><sub>0–10</sub> | 64.1% ± 1.9 <br><sub>62–66</sub> | ₹5,182 <br><sub>₹0–₹6,478</sub> |
+| `legacy-optimistic` — HTML storefront, agent that proceeds when unsure | 80.0% ± 4.4 <br><sub>74–84</sub> | 33.3% ± 1.1 <br><sub>32–35</sub> | 67.6% ± 1.9 <br><sub>66–69</sub> | ₹42,411 <br><sub>₹37,836–₹44,314</sub> |
+
+`payable` is not perfect and the spread says so: seeded payment declines cost it
+real transactions, which is why success ranges 84–100% rather than sitting at a
+suspicious 100. What does hold on **every** seed is the wrong-item rate — 0.0%
+with zero variance. It loses sales to the payment network; it never buys the
+wrong thing.
 
 The interesting finding is not that structured beats HTML. It is the shape of
 the trade-off in the two legacy rows:
 
 > On an unstructured storefront, a buyer agent has to choose between **losing the
-> sale** (cautious: 60% success) and **buying the wrong thing** (confident: 27%
-> of its purchases are wrong, ₹14,912 of real money). It cannot have both.
+> sale** (cautious: 49.5% success) and **buying the wrong thing** (confident: a
+> third of its purchases are wrong, ~₹42,000 of real money across 29 tasks). It
+> cannot have both.
 >
 > The transactability layer removes the choice. The merchant tells the agent what
 > it cannot verify, so the agent stops guessing.
+
+Note the direction of the trade: going from cautious to optimistic on the HTML
+storefront buys **+30 points of transaction success** at the cost of **+26 points
+of wrong-item rate**. Decision accuracy barely moves (64.1% → 67.6%), because the
+extra sales and the extra mistakes very nearly cancel out. That is the trap:
+the optimistic agent looks dramatically better on the metric a merchant watches,
+and is dramatically worse on the one a buyer cares about.
 
 Full report with per-task detail: [`docs/benchmark.md`](docs/benchmark.md).
 
@@ -63,10 +83,11 @@ A forced payment decline and the bounded fallback that recovers it:
 python scripts/demo.py --decline
 ```
 
-The full benchmark:
+The full benchmark, repeated across 5 payment seeds so the numbers carry a
+variance rather than a single lucky run:
 
 ```bash
-python -m payable.bench.runner --md-out docs/benchmark.md
+python -m payable.bench.runner --repeats 5 --md-out docs/benchmark.md
 ```
 
 The merchant service, with all its surfaces:
@@ -121,16 +142,23 @@ its principal, and the merchant re-verifies it server-side before an order
 exists:
 
 ```
-signature (HMAC-SHA256)  ·  expiry  ·  amount cap  ·  category scope
+Ed25519 signature  ·  expiry  ·  amount cap  ·  category scope
 ```
 
-Editing `max_amount_paise` client-side invalidates the signature
-([`tests/test_mandate.py`](tests/test_mandate.py) proves it). A misreasoning
-agent fails closed rather than overspending.
+**The principal holds the private key; the merchant holds only the public half**
+(`GET /api/principals`). That asymmetry is the point — a merchant compromise
+cannot mint mandates, because the merchant never had the power to sign one.
 
-The shared-secret HMAC stands in for what would be an asymmetric,
-registry-anchored credential in production — the merchant would hold the
-principal's public key, not a symmetric secret.
+Editing `max_amount_paise` client-side invalidates the signature. So does
+reassigning the mandate to another principal, or editing the `alg` field, which
+is itself inside the signed payload.
+
+There is a symmetric HMAC fallback for environments without `cryptography`, and
+it comes with a specific hazard: its secret has a documented default. So the
+merchant **refuses a symmetric mandate for any principal that has enrolled a
+public key** — otherwise anyone holding that default secret could spend as
+anyone. [`tests/test_mandate.py`](tests/test_mandate.py) covers each of these,
+including that downgrade attempt.
 
 ---
 
@@ -168,7 +196,7 @@ Stated plainly, because it changes how the numbers should be read.
 |---|---|
 | MCP JSON-RPC server, tool schemas, A2A agent card, JSON-LD feed | **Real.** Any MCP client or crawler can consume them. |
 | Constraint search, advisories, quoting, GST/shipping maths, inventory reservation, idempotency | **Real.** |
-| Mandate signing and verification | **Real** HMAC-SHA256. |
+| Mandate signing and verification | **Real** Ed25519 (asymmetric), with a dev-only HMAC fallback the merchant refuses for enrolled principals. |
 | Audit log | **Real**, both backends. |
 | Razorpay **order creation** | **Real** against test mode when `RAZORPAY_KEY_ID` is set — returns a real `order_...` id visible in the dashboard. Payment Links too. |
 | Razorpay **capture** | **Simulated.** Razorpay completes payment through hosted checkout, which needs a browser and a payer. With keys set, the result is labelled `razorpay-api+simulated-capture`; nothing in the audit log ever claims a capture that did not happen. |
@@ -192,7 +220,8 @@ enforces these and the tests check them:
 3. **Identical payment luck.** Declines are seeded on `(sku, amount, attempt)`,
    not on a random order id — so every arm meets the same declines at the same
    points. Without this an arm could look better purely by drawing luckier
-   failures.
+   failures. `--repeats N` then re-runs the whole suite across N seeds and
+   reports the spread, so no single seed carries the claim.
 4. **The baseline is not a strawman.** The legacy scraper follows the real
    purchase path, parses Indian-format prices correctly, filters by category from
    the listing, normalises spec labels through a synonym table, and coerces units
@@ -233,7 +262,7 @@ The taxonomy is diagnostic, not decorative — `legacy-strict`'s
 payable/
   catalog.py          constraint search, ranking, ambiguity advisories, JSON-LD
   commerce.py         quote -> order -> payment, GST, idempotency, inventory
-  mandate.py          issue and verify signed spending authorizations
+  mandate.py          Ed25519 mandates, keyring, downgrade refusal
   audit.py            append-only decision log (Redis Streams | JSONL)
   models.py           the transactability contract
   payments/           razorpay_api.py (live test mode) | simulated.py (offline)
@@ -248,9 +277,9 @@ payable/
     llm.py            optional LLM constraint extraction
   bench/              harness, metrics, reporting
 data/
-  catalog.json        14 SKUs with typed specs
-  tasks.json          16 buyer tasks with ground truth
-tests/                100 tests
+  catalog.json        23 SKUs with typed specs
+  tasks.json          29 buyer tasks with ground truth
+tests/                135 tests
 ```
 
 ### Endpoints
@@ -263,6 +292,7 @@ tests/                100 tests
 | `GET /catalog.jsonld` | schema.org feed with `BuyAction` pointing at `/mcp` |
 | `GET /api/audit/runs/{run_id}` | replay any run |
 | `GET /legacy/` | the control-arm storefront |
+| `GET /api/principals` | public keys the merchant verifies mandates against |
 | `GET /health` | which backend each subsystem is using |
 
 ---
@@ -271,16 +301,22 @@ tests/                100 tests
 
 - **Capture is simulated**, for the reason given above. A full roundtrip with a
   real captured payment needs a browser driving Razorpay's hosted checkout.
-- **One merchant, 14 SKUs.** The advisory logic is tuned against a catalog small
+- **One merchant, 23 SKUs.** The advisory logic is tuned against a catalog small
   enough to reason about by hand. Cross-merchant discovery and a registry are the
   obvious next thing and are not built.
 - **The deterministic planner is not an LLM.** That is deliberate for benchmark
   stability, but it means these numbers measure the *merchant surface* under a
   well-behaved buyer. An LLM buyer would add its own error rate on top; the
   `payable` arm's headroom over legacy would shrink somewhat, and quantifying
-  that is the honest next experiment.
-- **The mandate is a shared-secret HMAC**, not the asymmetric, registry-anchored
-  credential a production authorization scheme needs.
-- **16 tasks is small.** The per-arm differences are large enough to be visible,
-  but this is a demonstration of a measurement method, not a statistically
-  powered study.
+  that is the honest next experiment. This is now the single biggest gap.
+- **The key registry is in-process.** Ed25519 signing and verification are real,
+  but `PrincipalKeyring` holds keys in memory and — for demo convenience only —
+  will generate a keypair on first use. A production deployment enrols public
+  keys out of band and never generates a principal's private key.
+- **29 tasks across 5 seeds is a small study.** The seed variance is reported, so
+  the payment-luck component is quantified. What is *not* quantified is
+  task-selection variance: the tasks were hand-authored by the same person who
+  built the surface being measured, which is the most likely place for
+  unconscious bias to enter. Ground-truth self-consistency is machine-checked
+  ([`tests/test_bench.py`](tests/test_bench.py)); representativeness is not, and
+  cannot be by these tests alone.

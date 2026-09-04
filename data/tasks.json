@@ -359,6 +359,246 @@
           "value": "numpad-22"
         }
       ]
+    },
+    {
+      "task_id": "cam-4k-60fps",
+      "brief": "A 4K webcam that can record at 60 frames per second.",
+      "category": "webcam",
+      "budget_paise": 1200000,
+      "expected_sku": "CAM-4K-60",
+      "constraints": [
+        {
+          "field": "resolution_p",
+          "op": "eq",
+          "value": 2160
+        },
+        {
+          "field": "fps",
+          "op": "gte",
+          "value": 60
+        }
+      ]
+    },
+    {
+      "task_id": "cam-wide-fov",
+      "brief": "Webcam with a privacy shutter and a wide field of view, at least 85 degrees.",
+      "category": "webcam",
+      "budget_paise": 1200000,
+      "expected_sku": "CAM-4K-60",
+      "note": "Both webcams have a shutter. Only the field of view separates them, and it is printed under a label a scraper cannot map.",
+      "constraints": [
+        {
+          "field": "privacy_shutter",
+          "op": "true"
+        },
+        {
+          "field": "fov_deg",
+          "op": "gte",
+          "value": 85
+        }
+      ]
+    },
+    {
+      "task_id": "cam-1080-budget",
+      "brief": "Basic 1080p webcam, under 3000 rupees.",
+      "category": "webcam",
+      "budget_paise": 400000,
+      "expected_sku": "CAM-1080-30",
+      "constraints": [
+        {
+          "field": "resolution_p",
+          "op": "eq",
+          "value": 1080
+        },
+        {
+          "field": "price_paise",
+          "op": "lte",
+          "value": 300000
+        }
+      ]
+    },
+    {
+      "task_id": "mic-xlr-phantom",
+      "brief": "XLR condenser microphone that runs on phantom power.",
+      "category": "microphone",
+      "budget_paise": 1300000,
+      "expected_sku": "MIC-XLR-COND",
+      "constraints": [
+        {
+          "field": "connector_type",
+          "op": "eq",
+          "value": "xlr"
+        },
+        {
+          "field": "phantom_power",
+          "op": "true"
+        }
+      ]
+    },
+    {
+      "task_id": "mic-usb-monitoring",
+      "brief": "USB microphone for podcasting with zero latency headphone monitoring.",
+      "category": "microphone",
+      "budget_paise": 800000,
+      "expected_sku": "MIC-USB-CARD",
+      "constraints": [
+        {
+          "field": "connector_type",
+          "op": "contains",
+          "value": "usb"
+        },
+        {
+          "field": "monitoring",
+          "op": "true"
+        }
+      ]
+    },
+    {
+      "task_id": "mic-boom-trap",
+      "brief": "Microphone that ships with a boom arm included.",
+      "category": "microphone",
+      "budget_paise": 1300000,
+      "expected_sku": null,
+      "expect_abstain": true,
+      "note": "Neither microphone includes a boom arm. Buying one anyway leaves the buyer without the thing they asked for.",
+      "constraints": [
+        {
+          "field": "boom_arm",
+          "op": "true"
+        }
+      ]
+    },
+    {
+      "task_id": "ssd-2tb-fast",
+      "brief": "Portable 2TB SSD with sequential reads of at least 1500 MB/s.",
+      "category": "storage",
+      "budget_paise": 1700000,
+      "expected_sku": "SSD-2TB-NVME",
+      "constraints": [
+        {
+          "field": "capacity_gb",
+          "op": "gte",
+          "value": 2000
+        },
+        {
+          "field": "read_mbps",
+          "op": "gte",
+          "value": 1500
+        }
+      ]
+    },
+    {
+      "task_id": "ssd-encrypted-1tb",
+      "brief": "1TB portable SSD with hardware AES encryption.",
+      "category": "storage",
+      "budget_paise": 1000000,
+      "expected_sku": "SSD-1TB-NVME",
+      "constraints": [
+        {
+          "field": "capacity_gb",
+          "op": "eq",
+          "value": 1000
+        },
+        {
+          "field": "encryption",
+          "op": "eq",
+          "value": "aes-256"
+        }
+      ]
+    },
+    {
+      "task_id": "ssd-3000-read-trap",
+      "brief": "Portable SSD reading at 3000 MB/s or faster.",
+      "category": "storage",
+      "budget_paise": 2000000,
+      "expected_sku": null,
+      "expect_abstain": true,
+      "note": "Nothing in the catalog is that fast. The nearest drive is a third slower.",
+      "constraints": [
+        {
+          "field": "read_mbps",
+          "op": "gte",
+          "value": 3000
+        }
+      ]
+    },
+    {
+      "task_id": "ssd-ambiguous",
+      "brief": "Portable SSD with hardware encryption and a shock rating.",
+      "category": "storage",
+      "budget_paise": 2000000,
+      "expected_sku": null,
+      "expect_abstain": true,
+      "note": "Both drives qualify and differ only in capacity, which the buyer never specified.",
+      "constraints": [
+        {
+          "field": "encryption",
+          "op": "eq",
+          "value": "aes-256"
+        },
+        {
+          "field": "shock_rated",
+          "op": "true"
+        }
+      ]
+    },
+    {
+      "task_id": "stand-alu-8kg",
+      "brief": "Adjustable aluminium laptop stand rated to hold at least 8 kg.",
+      "category": "stand",
+      "budget_paise": 450000,
+      "expected_sku": "STAND-ALU-ADJ",
+      "constraints": [
+        {
+          "field": "material",
+          "op": "eq",
+          "value": "aluminium"
+        },
+        {
+          "field": "max_load_kg",
+          "op": "gte",
+          "value": 8
+        }
+      ]
+    },
+    {
+      "task_id": "hub-powered-trap",
+      "brief": "A four port USB-A hub with its own external power supply.",
+      "category": "hub",
+      "budget_paise": 400000,
+      "expected_sku": null,
+      "expect_abstain": true,
+      "note": "The only hub is bus powered. An externally powered one does not exist here.",
+      "constraints": [
+        {
+          "field": "port_type",
+          "op": "eq",
+          "value": "usb-a-3.0"
+        },
+        {
+          "field": "powered",
+          "op": "true"
+        }
+      ]
+    },
+    {
+      "task_id": "kvm-4k-2port",
+      "brief": "Two port KVM switch that supports 4K output.",
+      "category": "kvm",
+      "budget_paise": 650000,
+      "expected_sku": "KVM-2P-4K",
+      "constraints": [
+        {
+          "field": "inputs",
+          "op": "gte",
+          "value": 2
+        },
+        {
+          "field": "max_resolution",
+          "op": "eq",
+          "value": "3840x2160"
+        }
+      ]
     }
   ]
 }

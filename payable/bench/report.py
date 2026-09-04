@@ -69,6 +69,24 @@ def render_text(report: dict) -> str:
         rendered = ", ".join(f"{k}={v}" for k, v in taxonomy.items())
         lines.append(f"{summary['arm']:<18} {rendered}")
 
+    seeds = report.get("seeds") or []
+    if len(seeds) > 1:
+        lines.append("")
+        lines.append(f"variance across {len(seeds)} seeds ({seeds[0]}..{seeds[-1]})")
+        lines.append("-" * 92)
+        header = f"{'arm':<18} {'txn success':<26}{'wrong item':<26}{'decision acc':<26}"
+        lines.append(header)
+        for row in report["aggregate"]:
+            cells = ""
+            for metric in (
+                "transaction_success_pct",
+                "wrong_item_rate_pct",
+                "decision_accuracy_pct",
+            ):
+                m = row[metric]
+                cells += f"{m['mean']:.1f}% sd {m['stdev']:.1f} [{m['min']:.0f}-{m['max']:.0f}]".ljust(26)
+            lines.append(f"{row['arm']:<18} {cells}")
+
     return "\n".join(lines)
 
 
@@ -116,7 +134,33 @@ def render_markdown(report: dict) -> str:
         rendered = ", ".join(f"`{k}`×{v}" for k, v in taxonomy.items()) or "—"
         out.append(f"| `{s['arm']}` | {rendered} |")
 
+    seeds = report.get("seeds") or []
+    if len(seeds) > 1:
+        out.append(f"\n## Variance across {len(seeds)} seeds ({seeds[0]}–{seeds[-1]})\n")
+        out.append(
+            "Selection is seed-independent by construction, so this spread is purely "
+            "payment luck. Reported so that no single lucky seed carries the claim.\n"
+        )
+        out.append("| Arm | Txn success | Wrong-item rate | Decision accuracy | Money misspent |")
+        out.append("|---|---|---|---|---|")
+
+        def spread(row: dict, metric: str) -> str:
+            m = row[metric]
+            return f"{m['mean']:.1f}% ± {m['stdev']:.1f} <br><sub>{m['min']:.0f}–{m['max']:.0f}</sub>"
+
+        for row in report["aggregate"]:
+            misspent = row["misspent_paise"]
+            out.append(
+                f"| `{row['arm']}` | {spread(row, 'transaction_success_pct')} | "
+                f"{spread(row, 'wrong_item_rate_pct')} | "
+                f"{spread(row, 'decision_accuracy_pct')} | "
+                f"₹{misspent['mean'] / 100:,.0f} "
+                f"<br><sub>₹{misspent['min'] / 100:,.0f}–₹{misspent['max'] / 100:,.0f}</sub> |"
+            )
+
     out.append("\n## Per-task detail\n")
+    if len(seeds) > 1:
+        out.append(f"_Seed {seeds[0]} shown; the other {len(seeds) - 1} differ only in payment luck._\n")
     arms = list(report["runs"].keys())
     out.append("| Task | " + " | ".join(f"`{a}`" for a in arms) + " |")
     out.append("|---|" + "---|" * len(arms))

@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: python -m pytest
+
+  benchmark:
+    # The benchmark is the project's central claim, so CI reproduces it rather
+    # than trusting the committed report.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Reproduce the benchmark across five seeds
+        run: python -m payable.bench.runner --repeats 5 --md-out benchmark-ci.md
+
+      - name: Check the committed report still matches
+        run: |
+          if ! diff -q <(tail -n +2 docs/benchmark.md) <(tail -n +2 benchmark-ci.md) >/dev/null; then
+            echo "::warning::docs/benchmark.md differs from a fresh run; regenerate it."
+            diff <(tail -n +2 docs/benchmark.md) <(tail -n +2 benchmark-ci.md) | head -40 || true
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-report
+          path: |
+            benchmark-ci.md
+            data/benchmark.json

@@ -5,3 +5,7 @@ uvicorn>=0.27
 pydantic>=2.6
 httpx>=0.27
 python-multipart>=0.0.9
+
+# Ed25519 mandate signing. Without it the merchant falls back to a symmetric
+# HMAC, which is dev-only -- see payable/mandate.py.
+cryptography>=42.0

@@ -189,6 +189,84 @@ def run_benchmark(
     }
 
 
+# --------------------------------------------------------------------------
+# Multi-seed suite
+# --------------------------------------------------------------------------
+
+VARIANCE_METRICS = [
+    "transaction_success_pct",
+    "wrong_item_rate_pct",
+    "decision_accuracy_pct",
+    "median_latency_ms",
+    "misspent_paise",
+    "payment_declines",
+]
+
+
+def aggregate(reports: list[dict]) -> list[dict]:
+    """Mean and range per arm across seeds.
+
+    Selection is seed-independent by construction, so the spread here is purely
+    payment luck. Reporting it stops a single lucky seed from carrying a claim.
+    """
+    by_arm: dict[str, list[dict]] = {}
+    for report in reports:
+        for summary in report["summaries"]:
+            by_arm.setdefault(summary["arm"], []).append(summary)
+
+    rows = []
+    for arm, summaries in by_arm.items():
+        row: dict[str, Any] = {"arm": arm, "seeds": len(summaries)}
+        for metric in VARIANCE_METRICS:
+            values = [s[metric] for s in summaries]
+            row[metric] = {
+                "mean": round(statistics.mean(values), 2),
+                "min": round(min(values), 2),
+                "max": round(max(values), 2),
+                "stdev": round(statistics.stdev(values), 2) if len(values) > 1 else 0.0,
+            }
+        taxonomy: dict[str, int] = {}
+        for summary in summaries:
+            for code, count in summary["failure_taxonomy"].items():
+                taxonomy[code] = taxonomy.get(code, 0) + count
+        row["failure_taxonomy_total"] = dict(sorted(taxonomy.items(), key=lambda kv: -kv[1]))
+        rows.append(row)
+    return rows
+
+
+def run_suite(
+    arms: Iterable[str] = ("payable", "legacy-strict", "legacy-optimistic"),
+    tasks_path: Path | None = None,
+    base_url: str | None = None,
+    seeds: Iterable[int] = (1733,),
+    failure_rate: float | None = None,
+) -> dict:
+    """Run the benchmark once per seed and aggregate."""
+    seeds = list(seeds)
+    reports = [
+        run_benchmark(arms=arms, tasks_path=tasks_path, base_url=base_url,
+                      seed=seed, failure_rate=failure_rate)
+        for seed in seeds
+    ]
+    head = reports[0]
+    return {
+        "generated_at": head["generated_at"],
+        "config": head["config"],
+        "payment_failure_rate": head["payment_failure_rate"],
+        "task_count": head["task_count"],
+        "seeds": seeds,
+        "aggregate": aggregate(reports),
+        "per_seed": [
+            {"seed": seed, "summaries": report["summaries"]}
+            for seed, report in zip(seeds, reports)
+        ],
+        # Full per-task rows for the first seed only; the rest would just bloat
+        # the artifact without adding anything a reader would use.
+        "summaries": head["summaries"],
+        "runs": head["runs"],
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Payable agent-commerce benchmark")
     parser.add_argument(
@@ -200,6 +278,10 @@ def main() -> None:
     parser.add_argument("--base-url", default=None, help="run against a live server instead of in-process")
     parser.add_argument("--seed", type=int, default=None, help="override the decline seed")
     parser.add_argument(
+        "--repeats", type=int, default=1,
+        help="run the suite across this many consecutive seeds and report variance",
+    )
+    parser.add_argument(
         "--failure-rate", type=float, default=None,
         help="override the injected payment decline rate (0.0-1.0)",
     )
@@ -207,11 +289,15 @@ def main() -> None:
     parser.add_argument("--md-out", type=Path, default=None, help="also write a markdown report")
     args = parser.parse_args()
 
-    report = run_benchmark(
-        arms=[a.strip() for a in args.arms.split(",") if a.strip()],
+    arms = [a.strip() for a in args.arms.split(",") if a.strip()]
+    base_seed = args.seed if args.seed is not None else SETTINGS.seed
+    seeds = [base_seed + i for i in range(max(1, args.repeats))]
+
+    report = run_suite(
+        arms=arms,
         tasks_path=args.tasks,
         base_url=args.base_url,
-        seed=args.seed,
+        seeds=seeds,
         failure_rate=args.failure_rate,
     )
 

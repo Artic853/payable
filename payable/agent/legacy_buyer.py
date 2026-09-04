@@ -89,6 +89,23 @@ _LABEL_SYNONYMS = {
     "connector": "connector",
     "length": "length_m",
     "data rate": "data_gbps",
+    "video resolution": "resolution_p",
+    "frame rate": "fps",
+    "autofocus": "autofocus",
+    "connector type": "connector_type",
+    "polar pattern": "polar_pattern",
+    "capacity": "capacity_gb",
+    "interface": "interface",
+    "material": "material",
+    "adjustable": "adjustable",
+    "foldable": "foldable",
+    "inputs": "inputs",
+    "port type": "port_type",
+    "maximum resolution": "max_resolution",
+    # Deliberately absent, because a scraper has no way to guess them:
+    # "field of view", "privacy shutter", "phantom power",
+    # "zero-latency monitoring", "sequential read", "hardware encryption",
+    # "maximum load", "externally powered", "hotkey switching".
 }
 
 _STOPWORDS = {

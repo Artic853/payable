@@ -7,7 +7,14 @@ the agent never sees the answer, and two runs agree.
 
 import pytest
 
-from payable.bench.runner import load_tasks, run_benchmark, summarize
+from payable.bench.report import render_markdown, render_text
+from payable.bench.runner import (
+    VARIANCE_METRICS,
+    load_tasks,
+    run_benchmark,
+    run_suite,
+    summarize,
+)
 from payable.catalog import CATALOG
 from payable.commerce import price_for
 from payable.models import AdvisoryCode, SearchRequest
@@ -166,3 +173,54 @@ def test_summarize_handles_an_empty_arm():
     assert summary["tasks"] == 0
     assert summary["transaction_success_pct"] == 0.0
     assert summary["wrong_item_rate_pct"] == 0.0
+
+
+# -- multi-seed suite ------------------------------------------------------
+
+def test_suite_aggregates_across_seeds():
+    report = run_suite(arms=("payable",), seeds=(11, 12, 13))
+    assert report["seeds"] == [11, 12, 13]
+    assert len(report["per_seed"]) == 3
+
+    row = report["aggregate"][0]
+    assert row["arm"] == "payable"
+    assert row["seeds"] == 3
+    for metric in VARIANCE_METRICS:
+        stats = row[metric]
+        assert stats["min"] <= stats["mean"] <= stats["max"]
+        assert stats["stdev"] >= 0
+
+
+def test_an_arm_never_picks_a_different_product_for_the_same_task():
+    """Selection happens before any payment, so the seed must not change it.
+
+    Asserted on the chosen SKU rather than on the wrong-item *rate*: that rate's
+    denominator is the number of completed purchases, which legitimately moves
+    when a decline lands, so it carries real variance even though the choice
+    does not.
+    """
+    arms = ("payable", "legacy-optimistic")
+    chosen: dict[tuple[str, str], set[str]] = {}
+
+    for seed in (21, 22, 23):
+        report = run_benchmark(arms=arms, seed=seed)
+        for arm, runs in report["runs"].items():
+            for run in runs:
+                if run["purchased_sku"]:
+                    chosen.setdefault((arm, run["task_id"]), set()).add(run["purchased_sku"])
+
+    unstable = {key: skus for key, skus in chosen.items() if len(skus) > 1}
+    assert not unstable, f"selection moved with the seed: {unstable}"
+
+
+def test_a_single_seed_produces_no_variance_block():
+    report = run_suite(arms=("payable",), seeds=(1733,))
+    assert len(report["seeds"]) == 1
+    assert "variance across" not in render_text(report)
+
+
+def test_variance_block_renders_for_multiple_seeds():
+    report = run_suite(arms=("payable",), seeds=(31, 32))
+    text = render_text(report)
+    assert "variance across 2 seeds" in text
+    assert "Variance across 2 seeds" in render_markdown(report)
