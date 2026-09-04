@@ -5,15 +5,19 @@ the ground truth is self-consistent, no arm gets an advantage the others do not,
 the agent never sees the answer, and two runs agree.
 """
 
+import json
+
 import pytest
 
 from payable.bench.report import render_markdown, render_text
 from payable.bench.runner import (
     VARIANCE_METRICS,
+    digest,
     load_tasks,
     run_benchmark,
     run_suite,
     summarize,
+    write_text,
 )
 from payable.catalog import CATALOG
 from payable.commerce import price_for
@@ -224,3 +228,46 @@ def test_variance_block_renders_for_multiple_seeds():
     text = render_text(report)
     assert "variance across 2 seeds" in text
     assert "Variance across 2 seeds" in render_markdown(report)
+
+
+# -- determinism digest ----------------------------------------------------
+
+def test_digest_excludes_timing():
+    """Timing must never enter the digest.
+
+    The digest is CI's reproducibility gate. Latency depends on the machine, so
+    including it would make the gate fail everywhere and get switched off.
+    """
+    report = run_suite(arms=("payable",), seeds=(41,))
+    blob = json.dumps(digest(report))
+    assert "_ms" not in blob
+    assert "latency" not in blob
+
+
+def test_digest_captures_every_task_decision():
+    report = run_suite(arms=("payable",), seeds=(41,))
+    d = digest(report)
+    assert len(d["outcomes"]["payable"]) == d["task_count"]
+    for task_id, outcome, sku, failure in d["outcomes"]["payable"]:
+        assert outcome in {"purchased", "abstained", "failed"}
+        assert (sku is None) != (outcome == "purchased")
+        del task_id, failure
+
+
+def test_digest_is_identical_across_repeated_runs():
+    first = digest(run_suite(arms=("payable", "legacy-strict"), seeds=(51, 52)))
+    second = digest(run_suite(arms=("payable", "legacy-strict"), seeds=(51, 52)))
+    assert json.dumps(first, sort_keys=True) == json.dumps(second, sort_keys=True)
+
+
+def test_digest_notices_a_changed_result():
+    """A gate that cannot fail is not a gate."""
+    quiet = digest(run_suite(arms=("payable",), seeds=(61,), failure_rate=0.0))
+    stormy = digest(run_suite(arms=("payable",), seeds=(61,), failure_rate=1.0))
+    assert quiet != stormy
+
+
+def test_write_text_always_emits_lf(tmp_path):
+    target = tmp_path / "report.md"
+    write_text(target, "one\ntwo\n")
+    assert target.read_bytes() == b"one\ntwo\n"

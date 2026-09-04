@@ -11,9 +11,9 @@
 
 | Arm | Txn success | Wrong-item rate | Decision accuracy | p50 latency | p95 latency | HTTP calls/task |
 |---|---|---|---|---|---|---|
-| `payable` | 100.0% | 0.0% | 100.0% | 132 ms | 252 ms | 4.1 |
-| `legacy-strict` | 52.6% | 9.1% | 65.5% | 52 ms | 206 ms | 4.1 |
-| `legacy-optimistic` | 84.2% | 33.3% | 69.0% | 163 ms | 283 ms | 5.3 |
+| `payable` | 100.0% | 0.0% | 100.0% | 154 ms | 256 ms | 4.1 |
+| `legacy-strict` | 52.6% | 9.1% | 65.5% | 60 ms | 198 ms | 4.1 |
+| `legacy-optimistic` | 84.2% | 33.3% | 69.0% | 178 ms | 273 ms | 5.3 |
 
 ## Outcomes
 

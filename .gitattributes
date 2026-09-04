@@ -1,0 +1,5 @@
+# Generated reports and data are compared byte-for-byte in CI, so they must not
+# be line-ending-translated on checkout.
+* text=auto eol=lf
+*.png binary
+*.jpg binary

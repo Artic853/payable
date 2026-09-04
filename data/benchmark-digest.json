@@ -1,0 +1,975 @@
+{
+  "arms": {
+    "legacy-optimistic": {
+      "buy_tasks": 19,
+      "correct_abstentions": 4,
+      "correct_purchases": 16,
+      "decision_accuracy_pct": 69.0,
+      "failure_taxonomy": {
+        "out_of_stock": 1,
+        "spec_mismatch": 4
+      },
+      "mean_http_calls": 5.3,
+      "mean_payment_attempts": 1.25,
+      "misspent_paise": 4431400,
+      "payment_declines": 6,
+      "purchases": 24,
+      "recovered_after_decline": 6,
+      "tasks": 29,
+      "transaction_success_pct": 84.2,
+      "trap_tasks": 10,
+      "wrong_item_rate_pct": 33.3,
+      "wrong_purchases": 8
+    },
+    "legacy-strict": {
+      "buy_tasks": 19,
+      "correct_abstentions": 9,
+      "correct_purchases": 10,
+      "decision_accuracy_pct": 65.5,
+      "failure_taxonomy": {
+        "out_of_stock": 1,
+        "parse_error": 12,
+        "spec_mismatch": 5
+      },
+      "mean_http_calls": 4.1,
+      "mean_payment_attempts": 1.09,
+      "misspent_paise": 647800,
+      "payment_declines": 1,
+      "purchases": 11,
+      "recovered_after_decline": 1,
+      "tasks": 29,
+      "transaction_success_pct": 52.6,
+      "trap_tasks": 10,
+      "wrong_item_rate_pct": 9.1,
+      "wrong_purchases": 1
+    },
+    "payable": {
+      "buy_tasks": 19,
+      "correct_abstentions": 10,
+      "correct_purchases": 19,
+      "decision_accuracy_pct": 100.0,
+      "failure_taxonomy": {
+        "ambiguous": 2,
+        "no_match": 4,
+        "out_of_stock": 1,
+        "spec_mismatch": 3
+      },
+      "mean_http_calls": 4.1,
+      "mean_payment_attempts": 1.21,
+      "misspent_paise": 0,
+      "payment_declines": 4,
+      "purchases": 19,
+      "recovered_after_decline": 4,
+      "tasks": 29,
+      "transaction_success_pct": 100.0,
+      "trap_tasks": 10,
+      "wrong_item_rate_pct": 0.0,
+      "wrong_purchases": 0
+    }
+  },
+  "outcomes": {
+    "legacy-optimistic": [
+      [
+        "cable-240w-bulk",
+        "purchased",
+        "CAB-USBC-2M-240W",
+        "none"
+      ],
+      [
+        "cam-1080-budget",
+        "purchased",
+        "CAM-1080-30",
+        "none"
+      ],
+      [
+        "cam-4k-60fps",
+        "purchased",
+        "CAM-4K-60",
+        "none"
+      ],
+      [
+        "cam-wide-fov",
+        "purchased",
+        "CAM-1080-30",
+        "none"
+      ],
+      [
+        "dock-dual-hdmi-100w",
+        "abstained",
+        null,
+        "spec_mismatch"
+      ],
+      [
+        "hp-anc-depth-40",
+        "purchased",
+        "HP-ANC-TWS-01",
+        "none"
+      ],
+      [
+        "hp-ldac-overear",
+        "purchased",
+        "HP-ANC-OVR-01",
+        "none"
+      ],
+      [
+        "hp-tws-30h-budget",
+        "abstained",
+        null,
+        "spec_mismatch"
+      ],
+      [
+        "hub-powered-trap",
+        "purchased",
+        "HUB-USBA-4P",
+        "none"
+      ],
+      [
+        "kb-ambiguous-tkl",
+        "purchased",
+        "KB-MECH-87-BRN",
+        "none"
+      ],
+      [
+        "kb-red-bulk-shortfall",
+        "failed",
+        null,
+        "out_of_stock"
+      ],
+      [
+        "kb-tkl-brown-bt",
+        "purchased",
+        "KB-MECH-87-BRN",
+        "none"
+      ],
+      [
+        "kb-wired-hotswap-rgb",
+        "purchased",
+        "KB-MECH-104-BRN",
+        "none"
+      ],
+      [
+        "kvm-4k-2port",
+        "purchased",
+        "KVM-2P-4K",
+        "none"
+      ],
+      [
+        "mic-boom-trap",
+        "purchased",
+        "MIC-USB-CARD",
+        "none"
+      ],
+      [
+        "mic-usb-monitoring",
+        "purchased",
+        "MIC-USB-CARD",
+        "none"
+      ],
+      [
+        "mic-xlr-phantom",
+        "purchased",
+        "MIC-XLR-COND",
+        "none"
+      ],
+      [
+        "mon-165hz-qhd",
+        "purchased",
+        "MON-27-QHD-165",
+        "none"
+      ],
+      [
+        "mon-4k-under-20k",
+        "abstained",
+        null,
+        "spec_mismatch"
+      ],
+      [
+        "mon-4k-usbc",
+        "purchased",
+        "MON-27-4K-IPS",
+        "none"
+      ],
+      [
+        "ms-8k-gaming-oos",
+        "abstained",
+        null,
+        "spec_mismatch"
+      ],
+      [
+        "ms-silent-office",
+        "purchased",
+        "MS-OFFICE-SIL-01",
+        "none"
+      ],
+      [
+        "ms-vertical-bt",
+        "purchased",
+        "MS-ERGO-VERT-01",
+        "none"
+      ],
+      [
+        "nomatch-numpad",
+        "purchased",
+        "MS-ERGO-VERT-01",
+        "none"
+      ],
+      [
+        "ssd-2tb-fast",
+        "purchased",
+        "SSD-2TB-NVME",
+        "none"
+      ],
+      [
+        "ssd-3000-read-trap",
+        "purchased",
+        "SSD-1TB-NVME",
+        "none"
+      ],
+      [
+        "ssd-ambiguous",
+        "purchased",
+        "SSD-1TB-NVME",
+        "none"
+      ],
+      [
+        "ssd-encrypted-1tb",
+        "purchased",
+        "SSD-1TB-NVME",
+        "none"
+      ],
+      [
+        "stand-alu-8kg",
+        "purchased",
+        "STAND-ALU-ADJ",
+        "none"
+      ]
+    ],
+    "legacy-strict": [
+      [
+        "cable-240w-bulk",
+        "abstained",
+        null,
+        "parse_error"
+      ],
+      [
+        "cam-1080-budget",
+        "purchased",
+        "CAM-1080-30",
+        "none"
+      ],
+      [
+        "cam-4k-60fps",
+        "purchased",
+        "CAM-4K-60",
+        "none"
+      ],
+      [
+        "cam-wide-fov",
+        "abstained",
+        null,
+        "parse_error"
+      ],
+      [
+        "dock-dual-hdmi-100w",
+        "abstained",
+        null,
+        "spec_mismatch"
+      ],
+      [
+        "hp-anc-depth-40",
+        "abstained",
+        null,
+        "parse_error"
+      ],
+      [
+        "hp-ldac-overear",
+        "abstained",
+        null,
+        "parse_error"
+      ],
+      [
+        "hp-tws-30h-budget",
+        "abstained",
+        null,
+        "spec_mismatch"
+      ],
+      [
+        "hub-powered-trap",
+        "abstained",
+        null,
+        "parse_error"
+      ],
+      [
+        "kb-ambiguous-tkl",
+        "purchased",
+        "KB-MECH-87-BRN",
+        "none"
+      ],
+      [
+        "kb-red-bulk-shortfall",
+        "failed",
+        null,
+        "out_of_stock"
+      ],
+      [
+        "kb-tkl-brown-bt",
+        "purchased",
+        "KB-MECH-87-BRN",
+        "none"
+      ],
+      [
+        "kb-wired-hotswap-rgb",
+        "purchased",
+        "KB-MECH-104-BRN",
+        "none"
+      ],
+      [
+        "kvm-4k-2port",
+        "purchased",
+        "KVM-2P-4K",
+        "none"
+      ],
+      [
+        "mic-boom-trap",
+        "abstained",
+        null,
+        "parse_error"
+      ],
+      [
+        "mic-usb-monitoring",
+        "abstained",
+        null,
+        "parse_error"
+      ],
+      [
+        "mic-xlr-phantom",
+        "purchased",
+        "MIC-XLR-COND",
+        "none"
+      ],
+      [
+        "mon-165hz-qhd",
+        "purchased",
+        "MON-27-QHD-165",
+        "none"
+      ],
+      [
+        "mon-4k-under-20k",
+        "abstained",
+        null,
+        "spec_mismatch"
+      ],
+      [
+        "mon-4k-usbc",
+        "purchased",
+        "MON-27-4K-IPS",
+        "none"
+      ],
+      [
+        "ms-8k-gaming-oos",
+        "abstained",
+        null,
+        "spec_mismatch"
+      ],
+      [
+        "ms-silent-office",
+        "purchased",
+        "MS-OFFICE-SIL-01",
+        "none"
+      ],
+      [
+        "ms-vertical-bt",
+        "purchased",
+        "MS-ERGO-VERT-01",
+        "none"
+      ],
+      [
+        "nomatch-numpad",
+        "abstained",
+        null,
+        "spec_mismatch"
+      ],
+      [
+        "ssd-2tb-fast",
+        "abstained",
+        null,
+        "parse_error"
+      ],
+      [
+        "ssd-3000-read-trap",
+        "abstained",
+        null,
+        "parse_error"
+      ],
+      [
+        "ssd-ambiguous",
+        "abstained",
+        null,
+        "parse_error"
+      ],
+      [
+        "ssd-encrypted-1tb",
+        "abstained",
+        null,
+        "parse_error"
+      ],
+      [
+        "stand-alu-8kg",
+        "abstained",
+        null,
+        "parse_error"
+      ]
+    ],
+    "payable": [
+      [
+        "cable-240w-bulk",
+        "purchased",
+        "CAB-USBC-2M-240W",
+        "none"
+      ],
+      [
+        "cam-1080-budget",
+        "purchased",
+        "CAM-1080-30",
+        "none"
+      ],
+      [
+        "cam-4k-60fps",
+        "purchased",
+        "CAM-4K-60",
+        "none"
+      ],
+      [
+        "cam-wide-fov",
+        "purchased",
+        "CAM-4K-60",
+        "none"
+      ],
+      [
+        "dock-dual-hdmi-100w",
+        "purchased",
+        "DOCK-USBC-11P",
+        "none"
+      ],
+      [
+        "hp-anc-depth-40",
+        "purchased",
+        "HP-ANC-OVR-01",
+        "none"
+      ],
+      [
+        "hp-ldac-overear",
+        "purchased",
+        "HP-ANC-OVR-01",
+        "none"
+      ],
+      [
+        "hp-tws-30h-budget",
+        "abstained",
+        null,
+        "spec_mismatch"
+      ],
+      [
+        "hub-powered-trap",
+        "abstained",
+        null,
+        "spec_mismatch"
+      ],
+      [
+        "kb-ambiguous-tkl",
+        "abstained",
+        null,
+        "ambiguous"
+      ],
+      [
+        "kb-red-bulk-shortfall",
+        "abstained",
+        null,
+        "out_of_stock"
+      ],
+      [
+        "kb-tkl-brown-bt",
+        "purchased",
+        "KB-MECH-87-BRN",
+        "none"
+      ],
+      [
+        "kb-wired-hotswap-rgb",
+        "purchased",
+        "KB-MECH-104-BRN",
+        "none"
+      ],
+      [
+        "kvm-4k-2port",
+        "purchased",
+        "KVM-2P-4K",
+        "none"
+      ],
+      [
+        "mic-boom-trap",
+        "abstained",
+        null,
+        "no_match"
+      ],
+      [
+        "mic-usb-monitoring",
+        "purchased",
+        "MIC-USB-CARD",
+        "none"
+      ],
+      [
+        "mic-xlr-phantom",
+        "purchased",
+        "MIC-XLR-COND",
+        "none"
+      ],
+      [
+        "mon-165hz-qhd",
+        "purchased",
+        "MON-27-QHD-165",
+        "none"
+      ],
+      [
+        "mon-4k-under-20k",
+        "abstained",
+        null,
+        "spec_mismatch"
+      ],
+      [
+        "mon-4k-usbc",
+        "purchased",
+        "MON-27-4K-IPS",
+        "none"
+      ],
+      [
+        "ms-8k-gaming-oos",
+        "abstained",
+        null,
+        "no_match"
+      ],
+      [
+        "ms-silent-office",
+        "purchased",
+        "MS-OFFICE-SIL-01",
+        "none"
+      ],
+      [
+        "ms-vertical-bt",
+        "purchased",
+        "MS-ERGO-VERT-01",
+        "none"
+      ],
+      [
+        "nomatch-numpad",
+        "abstained",
+        null,
+        "no_match"
+      ],
+      [
+        "ssd-2tb-fast",
+        "purchased",
+        "SSD-2TB-NVME",
+        "none"
+      ],
+      [
+        "ssd-3000-read-trap",
+        "abstained",
+        null,
+        "no_match"
+      ],
+      [
+        "ssd-ambiguous",
+        "abstained",
+        null,
+        "ambiguous"
+      ],
+      [
+        "ssd-encrypted-1tb",
+        "purchased",
+        "SSD-1TB-NVME",
+        "none"
+      ],
+      [
+        "stand-alu-8kg",
+        "purchased",
+        "STAND-ALU-ADJ",
+        "none"
+      ]
+    ]
+  },
+  "payment_failure_rate": 0.12,
+  "per_seed": [
+    {
+      "arms": {
+        "legacy-optimistic": {
+          "buy_tasks": 19,
+          "correct_abstentions": 4,
+          "correct_purchases": 16,
+          "decision_accuracy_pct": 69.0,
+          "failure_taxonomy": {
+            "out_of_stock": 1,
+            "spec_mismatch": 4
+          },
+          "mean_http_calls": 5.3,
+          "mean_payment_attempts": 1.25,
+          "misspent_paise": 4431400,
+          "payment_declines": 6,
+          "purchases": 24,
+          "recovered_after_decline": 6,
+          "tasks": 29,
+          "transaction_success_pct": 84.2,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 33.3,
+          "wrong_purchases": 8
+        },
+        "legacy-strict": {
+          "buy_tasks": 19,
+          "correct_abstentions": 9,
+          "correct_purchases": 10,
+          "decision_accuracy_pct": 65.5,
+          "failure_taxonomy": {
+            "out_of_stock": 1,
+            "parse_error": 12,
+            "spec_mismatch": 5
+          },
+          "mean_http_calls": 4.1,
+          "mean_payment_attempts": 1.09,
+          "misspent_paise": 647800,
+          "payment_declines": 1,
+          "purchases": 11,
+          "recovered_after_decline": 1,
+          "tasks": 29,
+          "transaction_success_pct": 52.6,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 9.1,
+          "wrong_purchases": 1
+        },
+        "payable": {
+          "buy_tasks": 19,
+          "correct_abstentions": 10,
+          "correct_purchases": 19,
+          "decision_accuracy_pct": 100.0,
+          "failure_taxonomy": {
+            "ambiguous": 2,
+            "no_match": 4,
+            "out_of_stock": 1,
+            "spec_mismatch": 3
+          },
+          "mean_http_calls": 4.1,
+          "mean_payment_attempts": 1.21,
+          "misspent_paise": 0,
+          "payment_declines": 4,
+          "purchases": 19,
+          "recovered_after_decline": 4,
+          "tasks": 29,
+          "transaction_success_pct": 100.0,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 0.0,
+          "wrong_purchases": 0
+        }
+      },
+      "seed": 1733
+    },
+    {
+      "arms": {
+        "legacy-optimistic": {
+          "buy_tasks": 19,
+          "correct_abstentions": 5,
+          "correct_purchases": 14,
+          "decision_accuracy_pct": 65.5,
+          "failure_taxonomy": {
+            "out_of_stock": 1,
+            "payment_declined": 3,
+            "spec_mismatch": 4
+          },
+          "mean_http_calls": 5.0,
+          "mean_payment_attempts": 1,
+          "misspent_paise": 4127700,
+          "payment_declines": 5,
+          "purchases": 21,
+          "recovered_after_decline": 0,
+          "tasks": 29,
+          "transaction_success_pct": 73.7,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 33.3,
+          "wrong_purchases": 7
+        },
+        "legacy-strict": {
+          "buy_tasks": 19,
+          "correct_abstentions": 9,
+          "correct_purchases": 9,
+          "decision_accuracy_pct": 62.1,
+          "failure_taxonomy": {
+            "out_of_stock": 1,
+            "parse_error": 12,
+            "payment_declined": 1,
+            "spec_mismatch": 5
+          },
+          "mean_http_calls": 4.1,
+          "mean_payment_attempts": 1,
+          "misspent_paise": 647800,
+          "payment_declines": 2,
+          "purchases": 10,
+          "recovered_after_decline": 0,
+          "tasks": 29,
+          "transaction_success_pct": 47.4,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 10.0,
+          "wrong_purchases": 1
+        },
+        "payable": {
+          "buy_tasks": 19,
+          "correct_abstentions": 10,
+          "correct_purchases": 16,
+          "decision_accuracy_pct": 89.7,
+          "failure_taxonomy": {
+            "ambiguous": 2,
+            "no_match": 4,
+            "out_of_stock": 1,
+            "payment_declined": 3,
+            "spec_mismatch": 3
+          },
+          "mean_http_calls": 4.0,
+          "mean_payment_attempts": 1,
+          "misspent_paise": 0,
+          "payment_declines": 4,
+          "purchases": 16,
+          "recovered_after_decline": 0,
+          "tasks": 29,
+          "transaction_success_pct": 84.2,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 0.0,
+          "wrong_purchases": 0
+        }
+      },
+      "seed": 1734
+    },
+    {
+      "arms": {
+        "legacy-optimistic": {
+          "buy_tasks": 19,
+          "correct_abstentions": 4,
+          "correct_purchases": 15,
+          "decision_accuracy_pct": 65.5,
+          "failure_taxonomy": {
+            "out_of_stock": 1,
+            "payment_declined": 1,
+            "spec_mismatch": 4
+          },
+          "mean_http_calls": 4.9,
+          "mean_payment_attempts": 1,
+          "misspent_paise": 4431400,
+          "payment_declines": 1,
+          "purchases": 23,
+          "recovered_after_decline": 0,
+          "tasks": 29,
+          "transaction_success_pct": 78.9,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 34.8,
+          "wrong_purchases": 8
+        },
+        "legacy-strict": {
+          "buy_tasks": 19,
+          "correct_abstentions": 9,
+          "correct_purchases": 9,
+          "decision_accuracy_pct": 62.1,
+          "failure_taxonomy": {
+            "out_of_stock": 1,
+            "parse_error": 12,
+            "payment_declined": 1,
+            "spec_mismatch": 5
+          },
+          "mean_http_calls": 4,
+          "mean_payment_attempts": 1,
+          "misspent_paise": 647800,
+          "payment_declines": 1,
+          "purchases": 10,
+          "recovered_after_decline": 0,
+          "tasks": 29,
+          "transaction_success_pct": 47.4,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 10.0,
+          "wrong_purchases": 1
+        },
+        "payable": {
+          "buy_tasks": 19,
+          "correct_abstentions": 10,
+          "correct_purchases": 18,
+          "decision_accuracy_pct": 96.6,
+          "failure_taxonomy": {
+            "ambiguous": 2,
+            "no_match": 4,
+            "out_of_stock": 1,
+            "payment_declined": 1,
+            "spec_mismatch": 3
+          },
+          "mean_http_calls": 4.0,
+          "mean_payment_attempts": 1.06,
+          "misspent_paise": 0,
+          "payment_declines": 2,
+          "purchases": 18,
+          "recovered_after_decline": 1,
+          "tasks": 29,
+          "transaction_success_pct": 94.7,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 0.0,
+          "wrong_purchases": 0
+        }
+      },
+      "seed": 1735
+    },
+    {
+      "arms": {
+        "legacy-optimistic": {
+          "buy_tasks": 19,
+          "correct_abstentions": 4,
+          "correct_purchases": 16,
+          "decision_accuracy_pct": 69.0,
+          "failure_taxonomy": {
+            "out_of_stock": 1,
+            "spec_mismatch": 4
+          },
+          "mean_http_calls": 5.1,
+          "mean_payment_attempts": 1.12,
+          "misspent_paise": 4431400,
+          "payment_declines": 3,
+          "purchases": 24,
+          "recovered_after_decline": 3,
+          "tasks": 29,
+          "transaction_success_pct": 84.2,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 33.3,
+          "wrong_purchases": 8
+        },
+        "legacy-strict": {
+          "buy_tasks": 19,
+          "correct_abstentions": 9,
+          "correct_purchases": 10,
+          "decision_accuracy_pct": 65.5,
+          "failure_taxonomy": {
+            "out_of_stock": 1,
+            "parse_error": 12,
+            "spec_mismatch": 5
+          },
+          "mean_http_calls": 4.1,
+          "mean_payment_attempts": 1.18,
+          "misspent_paise": 647800,
+          "payment_declines": 2,
+          "purchases": 11,
+          "recovered_after_decline": 2,
+          "tasks": 29,
+          "transaction_success_pct": 52.6,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 9.1,
+          "wrong_purchases": 1
+        },
+        "payable": {
+          "buy_tasks": 19,
+          "correct_abstentions": 10,
+          "correct_purchases": 19,
+          "decision_accuracy_pct": 100.0,
+          "failure_taxonomy": {
+            "ambiguous": 2,
+            "no_match": 4,
+            "out_of_stock": 1,
+            "spec_mismatch": 3
+          },
+          "mean_http_calls": 4.1,
+          "mean_payment_attempts": 1.16,
+          "misspent_paise": 0,
+          "payment_declines": 3,
+          "purchases": 19,
+          "recovered_after_decline": 3,
+          "tasks": 29,
+          "transaction_success_pct": 100.0,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 0.0,
+          "wrong_purchases": 0
+        }
+      },
+      "seed": 1736
+    },
+    {
+      "arms": {
+        "legacy-optimistic": {
+          "buy_tasks": 19,
+          "correct_abstentions": 5,
+          "correct_purchases": 15,
+          "decision_accuracy_pct": 69.0,
+          "failure_taxonomy": {
+            "out_of_stock": 1,
+            "payment_declined": 2,
+            "spec_mismatch": 4
+          },
+          "mean_http_calls": 4.9,
+          "mean_payment_attempts": 1,
+          "misspent_paise": 3783600,
+          "payment_declines": 2,
+          "purchases": 22,
+          "recovered_after_decline": 0,
+          "tasks": 29,
+          "transaction_success_pct": 78.9,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 31.8,
+          "wrong_purchases": 7
+        },
+        "legacy-strict": {
+          "buy_tasks": 19,
+          "correct_abstentions": 10,
+          "correct_purchases": 9,
+          "decision_accuracy_pct": 65.5,
+          "failure_taxonomy": {
+            "out_of_stock": 1,
+            "parse_error": 12,
+            "payment_declined": 2,
+            "spec_mismatch": 5
+          },
+          "mean_http_calls": 4,
+          "mean_payment_attempts": 1,
+          "misspent_paise": 0,
+          "payment_declines": 2,
+          "purchases": 9,
+          "recovered_after_decline": 0,
+          "tasks": 29,
+          "transaction_success_pct": 47.4,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 0.0,
+          "wrong_purchases": 0
+        },
+        "payable": {
+          "buy_tasks": 19,
+          "correct_abstentions": 10,
+          "correct_purchases": 18,
+          "decision_accuracy_pct": 96.6,
+          "failure_taxonomy": {
+            "ambiguous": 2,
+            "no_match": 4,
+            "out_of_stock": 1,
+            "payment_declined": 1,
+            "spec_mismatch": 3
+          },
+          "mean_http_calls": 4,
+          "mean_payment_attempts": 1,
+          "misspent_paise": 0,
+          "payment_declines": 1,
+          "purchases": 18,
+          "recovered_after_decline": 0,
+          "tasks": 29,
+          "transaction_success_pct": 94.7,
+          "trap_tasks": 10,
+          "wrong_item_rate_pct": 0.0,
+          "wrong_purchases": 0
+        }
+      },
+      "seed": 1737
+    }
+  ],
+  "seeds": [
+    1733,
+    1734,
+    1735,
+    1736,
+    1737
+  ],
+  "task_count": 29
+}

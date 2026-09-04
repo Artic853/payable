@@ -48,18 +48,27 @@ jobs:
           pip install -r requirements.txt
 
       - name: Reproduce the benchmark across five seeds
-        run: python -m payable.bench.runner --repeats 5 --md-out benchmark-ci.md
-
-      - name: Check the committed report still matches
         run: |
-          if ! diff -q <(tail -n +2 docs/benchmark.md) <(tail -n +2 benchmark-ci.md) >/dev/null; then
-            echo "::warning::docs/benchmark.md differs from a fresh run; regenerate it."
-            diff <(tail -n +2 docs/benchmark.md) <(tail -n +2 benchmark-ci.md) | head -40 || true
+          python -m payable.bench.runner --repeats 5             --md-out benchmark-ci.md             --digest-out digest-ci.json
+
+      - name: Assert the results are reproducible on this machine
+        # The digest holds every decision the run made and no timing, so it must
+        # match byte-for-byte on any machine. If it does not, the benchmark is
+        # not deterministic and none of its numbers mean anything.
+        run: |
+          if ! diff -u data/benchmark-digest.json digest-ci.json; then
+            echo "::error::Benchmark results differ from the committed digest."
+            echo "Either a change altered the results (regenerate the digest and"
+            echo "the report), or the benchmark is not deterministic."
+            exit 1
           fi
+          echo "Benchmark reproduced exactly."
 
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: benchmark-report
           path: |
             benchmark-ci.md
+            digest-ci.json
             data/benchmark.json

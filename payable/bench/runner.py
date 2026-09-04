@@ -267,6 +267,60 @@ def run_suite(
     }
 
 
+def digest(report: dict) -> dict:
+    """Canonical, machine-independent summary of a run.
+
+    Deliberately excludes every latency figure. Latency depends on the hardware,
+    so a reproducibility check that included it would fail on every machine and
+    quickly be ignored. What must be identical everywhere is the *decisions*:
+    which product each arm chose for each task, and how each run terminated.
+    """
+    arms = {}
+    for summary in report["summaries"]:
+        arms[summary["arm"]] = {
+            key: value for key, value in summary.items()
+            if not key.endswith("_ms") and key != "arm"
+        }
+
+    outcomes = {
+        arm: sorted(
+            (r["task_id"], r["outcome"], r["purchased_sku"], r["failure_code"])
+            for r in runs
+        )
+        for arm, runs in report["runs"].items()
+    }
+
+    per_seed = [
+        {
+            "seed": entry["seed"],
+            "arms": {
+                s["arm"]: {
+                    k: v for k, v in s.items()
+                    if not k.endswith("_ms") and k != "arm"
+                }
+                for s in entry["summaries"]
+            },
+        }
+        for entry in report.get("per_seed", [])
+    ]
+
+    return {
+        "task_count": report["task_count"],
+        "seeds": report.get("seeds", []),
+        "payment_failure_rate": report["payment_failure_rate"],
+        "arms": arms,
+        "outcomes": outcomes,
+        "per_seed": per_seed,
+    }
+
+
+def write_text(path: Path, text: str) -> None:
+    """Always LF, so artifacts compare equal across platforms."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", newline="\n") as fh:
+        fh.write(text)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Payable agent-commerce benchmark")
     parser.add_argument(
@@ -287,6 +341,10 @@ def main() -> None:
     )
     parser.add_argument("--json-out", type=Path, default=DATA_DIR / "benchmark.json")
     parser.add_argument("--md-out", type=Path, default=None, help="also write a markdown report")
+    parser.add_argument(
+        "--digest-out", type=Path, default=None,
+        help="write a machine-independent digest of the results (for CI determinism checks)",
+    )
     args = parser.parse_args()
 
     arms = [a.strip() for a in args.arms.split(",") if a.strip()]
@@ -301,8 +359,7 @@ def main() -> None:
         failure_rate=args.failure_rate,
     )
 
-    args.json_out.parent.mkdir(parents=True, exist_ok=True)
-    args.json_out.write_text(json.dumps(report, indent=2, default=str), encoding="utf-8")
+    write_text(args.json_out, json.dumps(report, indent=2, default=str, sort_keys=False))
 
     from .report import render_markdown, render_text
 
@@ -310,8 +367,12 @@ def main() -> None:
     print(f"\nraw results -> {args.json_out}")
 
     if args.md_out:
-        args.md_out.write_text(render_markdown(report), encoding="utf-8")
+        write_text(args.md_out, render_markdown(report))
         print(f"markdown report -> {args.md_out}")
+
+    if args.digest_out:
+        write_text(args.digest_out, json.dumps(digest(report), indent=2, sort_keys=True) + "\n")
+        print(f"determinism digest -> {args.digest_out}")
 
 
 if __name__ == "__main__":

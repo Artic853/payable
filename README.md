@@ -87,8 +87,13 @@ The full benchmark, repeated across 5 payment seeds so the numbers carry a
 variance rather than a single lucky run:
 
 ```bash
-python -m payable.bench.runner --repeats 5 --md-out docs/benchmark.md
+python -m payable.bench.runner --repeats 5   --md-out docs/benchmark.md   --digest-out data/benchmark-digest.json
 ```
+
+The digest holds every decision the run made and no timing, so it is identical
+on any machine. CI regenerates it and **fails** if it does not match the
+committed one — a benchmark that cannot be reproduced elsewhere is not evidence,
+and this is the check that says so out loud.
 
 The merchant service, with all its surfaces:
 
