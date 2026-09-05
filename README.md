@@ -87,7 +87,7 @@ The full benchmark, repeated across 5 payment seeds so the numbers carry a
 variance rather than a single lucky run:
 
 ```bash
-python -m payable.bench.runner --repeats 5   --md-out docs/benchmark.md   --digest-out data/benchmark-digest.json
+python -m payable.bench.runner --repeats 5 --md-out docs/benchmark.md --digest-out data/benchmark-digest.json
 ```
 
 The digest holds every decision the run made and no timing, so it is identical
@@ -95,7 +95,7 @@ on any machine. CI regenerates it and **fails** if it does not match the
 committed one — a benchmark that cannot be reproduced elsewhere is not evidence,
 and this is the check that says so out loud.
 
-The merchant service, with all its surfaces:
+The merchant service and the **web console** at <http://127.0.0.1:8000>:
 
 ```bash
 python -m uvicorn payable.server.app:app --reload
@@ -106,6 +106,27 @@ Tests:
 ```bash
 python -m pytest
 ```
+
+---
+
+## The console
+
+`GET /` is a live console, not a screenshot of one. Pick any of the 29 benchmark
+tasks, choose which surface the buyer has to work with, and it runs the real
+agent over real HTTP: it issues an Ed25519 mandate, calls the MCP tools (or
+scrapes the storefront, on a legacy arm), and shows you the verdict, the stage
+latencies, and the full audit trail of what each side decided and why.
+
+The single most useful thing to click is a task marked ⚠. Those are the traps
+where **not buying is the correct answer** — run one on `payable`, then on
+`legacy-optimistic`, and watch the same brief produce a refusal in one arm and a
+wrong purchase in the other.
+
+| Route | |
+|---|---|
+| `/` | console — live demo, benchmark, catalog |
+| `/legacy/` | the control storefront the legacy arms scrape |
+| `/docs` | OpenAPI |
 
 ---
 
@@ -273,6 +294,8 @@ payable/
   payments/           razorpay_api.py (live test mode) | simulated.py (offline)
   server/
     app.py            discovery, MCP endpoint, REST mirror, audit API
+    console_api.py    live-demo backend for the web console
+    web/              the console itself (no build step, no dependencies)
     mcp_http.py       MCP tool definitions and JSON-RPC dispatch
     legacy.py         the control arm: same shop as plain HTML
   agent/
@@ -284,7 +307,7 @@ payable/
 data/
   catalog.json        23 SKUs with typed specs
   tasks.json          29 buyer tasks with ground truth
-tests/                135 tests
+tests/                156 tests
 ```
 
 ### Endpoints
@@ -298,6 +321,7 @@ tests/                135 tests
 | `GET /api/audit/runs/{run_id}` | replay any run |
 | `GET /legacy/` | the control-arm storefront |
 | `GET /api/principals` | public keys the merchant verifies mandates against |
+| `GET /` | the web console |
 | `GET /health` | which backend each subsystem is using |
 
 ---

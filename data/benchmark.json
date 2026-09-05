@@ -1,5 +1,5 @@
 {
-  "generated_at": 1788514037.271483,
+  "generated_at": 1788616251.963836,
   "config": {
     "payments": "simulated (no RAZORPAY_KEY_ID)",
     "audit_log": "jsonl (audit.jsonl)",
@@ -38,10 +38,10 @@
         "stdev": 4.2
       },
       "median_latency_ms": {
-        "mean": 134.9,
-        "min": 125.7,
-        "max": 152.1,
-        "stdev": 10.43
+        "mean": 128.54,
+        "min": 119.2,
+        "max": 140.7,
+        "stdev": 8.07
       },
       "misspent_paise": {
         "mean": 0,
@@ -85,10 +85,10 @@
         "stdev": 1.86
       },
       "median_latency_ms": {
-        "mean": 56.66,
+        "mean": 55.26,
         "min": 52.0,
         "max": 59.9,
-        "stdev": 3.18
+        "stdev": 3.22
       },
       "misspent_paise": {
         "mean": 518240,
@@ -131,10 +131,10 @@
         "stdev": 1.92
       },
       "median_latency_ms": {
-        "mean": 158.74,
-        "min": 145.3,
-        "max": 164.0,
-        "stdev": 7.69
+        "mean": 156.36,
+        "min": 144.7,
+        "max": 166.0,
+        "stdev": 8.88
       },
       "misspent_paise": {
         "mean": 4241100,
@@ -172,8 +172,8 @@
           "wrong_item_rate_pct": 0.0,
           "decision_accuracy_pct": 100.0,
           "misspent_paise": 0,
-          "median_latency_ms": 125.7,
-          "p95_latency_ms": 249.9,
+          "median_latency_ms": 131.0,
+          "p95_latency_ms": 239.2,
           "mean_http_calls": 4.1,
           "mean_payment_attempts": 1.21,
           "payment_declines": 4,
@@ -198,8 +198,8 @@
           "wrong_item_rate_pct": 9.1,
           "decision_accuracy_pct": 65.5,
           "misspent_paise": 647800,
-          "median_latency_ms": 52.0,
-          "p95_latency_ms": 193.4,
+          "median_latency_ms": 56.2,
+          "p95_latency_ms": 195.9,
           "mean_http_calls": 4.1,
           "mean_payment_attempts": 1.09,
           "payment_declines": 1,
@@ -223,8 +223,8 @@
           "wrong_item_rate_pct": 33.3,
           "decision_accuracy_pct": 69.0,
           "misspent_paise": 4431400,
-          "median_latency_ms": 164.0,
-          "p95_latency_ms": 276.2,
+          "median_latency_ms": 166.0,
+          "p95_latency_ms": 265.2,
           "mean_http_calls": 5.3,
           "mean_payment_attempts": 1.25,
           "payment_declines": 6,
@@ -252,8 +252,8 @@
           "wrong_item_rate_pct": 0.0,
           "decision_accuracy_pct": 89.7,
           "misspent_paise": 0,
-          "median_latency_ms": 152.1,
-          "p95_latency_ms": 173.1,
+          "median_latency_ms": 140.7,
+          "p95_latency_ms": 182.4,
           "mean_http_calls": 4.0,
           "mean_payment_attempts": 1,
           "payment_declines": 4,
@@ -279,8 +279,8 @@
           "wrong_item_rate_pct": 10.0,
           "decision_accuracy_pct": 62.1,
           "misspent_paise": 647800,
-          "median_latency_ms": 55.3,
-          "p95_latency_ms": 226.2,
+          "median_latency_ms": 52.4,
+          "p95_latency_ms": 191.8,
           "mean_http_calls": 4.1,
           "mean_payment_attempts": 1,
           "payment_declines": 2,
@@ -305,8 +305,8 @@
           "wrong_item_rate_pct": 33.3,
           "decision_accuracy_pct": 65.5,
           "misspent_paise": 4127700,
-          "median_latency_ms": 160.0,
-          "p95_latency_ms": 190.0,
+          "median_latency_ms": 154.2,
+          "p95_latency_ms": 231.5,
           "mean_http_calls": 5.0,
           "mean_payment_attempts": 1,
           "payment_declines": 5,
@@ -335,8 +335,8 @@
           "wrong_item_rate_pct": 0.0,
           "decision_accuracy_pct": 96.6,
           "misspent_paise": 0,
-          "median_latency_ms": 134.7,
-          "p95_latency_ms": 171.4,
+          "median_latency_ms": 127.5,
+          "p95_latency_ms": 158.7,
           "mean_http_calls": 4.0,
           "mean_payment_attempts": 1.06,
           "payment_declines": 2,
@@ -362,8 +362,8 @@
           "wrong_item_rate_pct": 10.0,
           "decision_accuracy_pct": 62.1,
           "misspent_paise": 647800,
-          "median_latency_ms": 59.2,
-          "p95_latency_ms": 173.8,
+          "median_latency_ms": 55.8,
+          "p95_latency_ms": 156.8,
           "mean_http_calls": 4,
           "mean_payment_attempts": 1,
           "payment_declines": 1,
@@ -388,8 +388,8 @@
           "wrong_item_rate_pct": 34.8,
           "decision_accuracy_pct": 65.5,
           "misspent_paise": 4431400,
-          "median_latency_ms": 145.3,
-          "p95_latency_ms": 167.9,
+          "median_latency_ms": 144.7,
+          "p95_latency_ms": 170.8,
           "mean_http_calls": 4.9,
           "mean_payment_attempts": 1,
           "payment_declines": 1,
@@ -418,8 +418,8 @@
           "wrong_item_rate_pct": 0.0,
           "decision_accuracy_pct": 100.0,
           "misspent_paise": 0,
-          "median_latency_ms": 127.5,
-          "p95_latency_ms": 188.1,
+          "median_latency_ms": 124.3,
+          "p95_latency_ms": 189.1,
           "mean_http_calls": 4.1,
           "mean_payment_attempts": 1.16,
           "payment_declines": 3,
@@ -444,8 +444,8 @@
           "wrong_item_rate_pct": 9.1,
           "decision_accuracy_pct": 65.5,
           "misspent_paise": 647800,
-          "median_latency_ms": 56.9,
-          "p95_latency_ms": 202.0,
+          "median_latency_ms": 52.0,
+          "p95_latency_ms": 193.8,
           "mean_http_calls": 4.1,
           "mean_payment_attempts": 1.18,
           "payment_declines": 2,
@@ -469,8 +469,8 @@
           "wrong_item_rate_pct": 33.3,
           "decision_accuracy_pct": 69.0,
           "misspent_paise": 4431400,
-          "median_latency_ms": 163.4,
-          "p95_latency_ms": 242.1,
+          "median_latency_ms": 152.4,
+          "p95_latency_ms": 197.8,
           "mean_http_calls": 5.1,
           "mean_payment_attempts": 1.12,
           "payment_declines": 3,
@@ -498,8 +498,8 @@
           "wrong_item_rate_pct": 0.0,
           "decision_accuracy_pct": 96.6,
           "misspent_paise": 0,
-          "median_latency_ms": 134.5,
-          "p95_latency_ms": 178.5,
+          "median_latency_ms": 119.2,
+          "p95_latency_ms": 182.9,
           "mean_http_calls": 4,
           "mean_payment_attempts": 1,
           "payment_declines": 1,
@@ -526,7 +526,7 @@
           "decision_accuracy_pct": 65.5,
           "misspent_paise": 0,
           "median_latency_ms": 59.9,
-          "p95_latency_ms": 186.7,
+          "p95_latency_ms": 182.2,
           "mean_http_calls": 4,
           "mean_payment_attempts": 1,
           "payment_declines": 2,
@@ -551,8 +551,8 @@
           "wrong_item_rate_pct": 31.8,
           "decision_accuracy_pct": 69.0,
           "misspent_paise": 3783600,
-          "median_latency_ms": 161.0,
-          "p95_latency_ms": 185.2,
+          "median_latency_ms": 164.5,
+          "p95_latency_ms": 201.7,
           "mean_http_calls": 4.9,
           "mean_payment_attempts": 1,
           "payment_declines": 2,
@@ -580,8 +580,8 @@
       "wrong_item_rate_pct": 0.0,
       "decision_accuracy_pct": 100.0,
       "misspent_paise": 0,
-      "median_latency_ms": 125.7,
-      "p95_latency_ms": 249.9,
+      "median_latency_ms": 131.0,
+      "p95_latency_ms": 239.2,
       "mean_http_calls": 4.1,
       "mean_payment_attempts": 1.21,
       "payment_declines": 4,
@@ -606,8 +606,8 @@
       "wrong_item_rate_pct": 9.1,
       "decision_accuracy_pct": 65.5,
       "misspent_paise": 647800,
-      "median_latency_ms": 52.0,
-      "p95_latency_ms": 193.4,
+      "median_latency_ms": 56.2,
+      "p95_latency_ms": 195.9,
       "mean_http_calls": 4.1,
       "mean_payment_attempts": 1.09,
       "payment_declines": 1,
@@ -631,8 +631,8 @@
       "wrong_item_rate_pct": 33.3,
       "decision_accuracy_pct": 69.0,
       "misspent_paise": 4431400,
-      "median_latency_ms": 164.0,
-      "p95_latency_ms": 276.2,
+      "median_latency_ms": 166.0,
+      "p95_latency_ms": 265.2,
       "mean_http_calls": 5.3,
       "mean_payment_attempts": 1.25,
       "payment_declines": 6,
@@ -646,7 +646,7 @@
   "runs": {
     "payable": [
       {
-        "run_id": "run_ca4df3a0a82a",
+        "run_id": "run_a8aa9d3489ea",
         "arm": "payable",
         "task_id": "kb-tkl-brown-bt",
         "brief": "I want a tenkeyless mechanical keyboard with tactile brown switches that I can use over bluetooth.",
@@ -655,24 +655,24 @@
         "purchased_sku": "KB-MECH-87-BRN",
         "expected_sku": "KB-MECH-87-BRN",
         "amount_paise": 647820,
-        "order_id": "ord_6d2f2440fe954fdf",
-        "payment_id": "pay_SIM1d0a9c5e31d246",
+        "order_id": "ord_b9700c2caffd4738",
+        "payment_id": "pay_SIMb83a78b486e44e",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 212.14560000225902,
+        "latency_ms": 191.23790017329156,
         "stages": {
-          "discover_ms": 65.44109992682934,
-          "select_ms": 0.015200115740299225,
-          "quote_ms": 10.701999999582767,
-          "order_ms": 10.095399804413319,
-          "pay_ms": 109.21989986672997
+          "discover_ms": 60.46120007522404,
+          "select_ms": 0.015599885955452919,
+          "quote_ms": 6.355500081554055,
+          "order_ms": 6.547400029376149,
+          "pay_ms": 106.24340013600886
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_82541189ac83",
+        "run_id": "run_ca916b69c90a",
         "arm": "payable",
         "task_id": "kb-wired-hotswap-rgb",
         "brief": "Full size mechanical keyboard, hot swappable, RGB backlight, wired only - no bluetooth radio in this office.",
@@ -681,24 +681,24 @@
         "purchased_sku": "KB-MECH-104-BRN",
         "expected_sku": "KB-MECH-104-BRN",
         "amount_paise": 730420,
-        "order_id": "ord_7a7c6748513d4e53",
-        "payment_id": "pay_SIM82c6f4d1af3b40",
+        "order_id": "ord_e34f2a814cbb45e5",
+        "payment_id": "pay_SIMf51585e750034d",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 160.27089999988675,
+        "latency_ms": 140.09789982810616,
         "stages": {
-          "discover_ms": 23.81659997627139,
-          "select_ms": 0.01910002902150154,
-          "quote_ms": 8.567700162529945,
-          "order_ms": 13.157800072804093,
-          "pay_ms": 112.78859991580248
+          "discover_ms": 13.166199903935194,
+          "select_ms": 0.012699980288743973,
+          "quote_ms": 5.705799907445908,
+          "order_ms": 10.00080001540482,
+          "pay_ms": 109.97550003230572
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_e1008a25bebd",
+        "run_id": "run_19c5cd84c0c2",
         "arm": "payable",
         "task_id": "kb-ambiguous-tkl",
         "brief": "Get me a hot swappable tenkeyless keyboard with bluetooth.",
@@ -712,10 +712,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 17.1314999461174,
+        "latency_ms": 22.724600043147802,
         "stages": {
-          "discover_ms": 15.435399953275919,
-          "select_ms": 0.002499902620911598,
+          "discover_ms": 20.40769997984171,
+          "select_ms": 0.0031997915357351303,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -724,7 +724,7 @@
         "notes": []
       },
       {
-        "run_id": "run_c86f57b2ece2",
+        "run_id": "run_71de812d8d79",
         "arm": "payable",
         "task_id": "hp-anc-depth-40",
         "brief": "Wireless noise cancelling headphones for long flights, I need at least 40 dB of cancellation.",
@@ -733,24 +733,24 @@
         "purchased_sku": "HP-ANC-OVR-01",
         "expected_sku": "HP-ANC-OVR-01",
         "amount_paise": 1060820,
-        "order_id": "ord_f004f601fdb447d3",
-        "payment_id": "pay_SIMb6d34c659d044f",
+        "order_id": "ord_57e4e9aa16d44e01",
+        "payment_id": "pay_SIMd01231cecbb74c",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 138.11910012736917,
+        "latency_ms": 131.0421999078244,
         "stages": {
-          "discover_ms": 16.184199834242463,
-          "select_ms": 0.009399838745594025,
-          "quote_ms": 7.233199896290898,
-          "order_ms": 9.070100029930472,
-          "pay_ms": 104.50209979899228
+          "discover_ms": 13.44110001809895,
+          "select_ms": 0.007400056347250938,
+          "quote_ms": 6.692500086501241,
+          "order_ms": 9.408400161191821,
+          "pay_ms": 100.49779992550611
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_29d427413c66",
+        "run_id": "run_3af54ed05d87",
         "arm": "payable",
         "task_id": "hp-ldac-overear",
         "brief": "Over ear noise cancelling headphones that support LDAC for hi-res audio.",
@@ -759,24 +759,24 @@
         "purchased_sku": "HP-ANC-OVR-01",
         "expected_sku": "HP-ANC-OVR-01",
         "amount_paise": 1060820,
-        "order_id": "ord_e066857de9994cc6",
-        "payment_id": "pay_SIM03b85f7e54e14a",
+        "order_id": "ord_17c5179f728349ee",
+        "payment_id": "pay_SIMa7b14f68cbcd48",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 144.6360000409186,
+        "latency_ms": 144.4097999483347,
         "stages": {
-          "discover_ms": 20.195300225168467,
-          "select_ms": 0.009100185707211494,
-          "quote_ms": 10.961699998006225,
-          "order_ms": 10.736200027167797,
-          "pay_ms": 101.01390001364052
+          "discover_ms": 13.258600141853094,
+          "select_ms": 0.0075998250395059586,
+          "quote_ms": 10.548899881541729,
+          "order_ms": 14.050000114366412,
+          "pay_ms": 105.50449998117983
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_f492fab92539",
+        "run_id": "run_9b2542860d96",
         "arm": "payable",
         "task_id": "hp-tws-30h-budget",
         "brief": "ANC earbuds under 5000 rupees with at least 30 hours of total battery.",
@@ -790,10 +790,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 15.44549991376698,
+        "latency_ms": 35.11229995638132,
         "stages": {
-          "discover_ms": 13.722499832510948,
-          "select_ms": 0.0055998098105192184,
+          "discover_ms": 31.849099788814783,
+          "select_ms": 0.01209997572004795,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -802,7 +802,7 @@
         "notes": []
       },
       {
-        "run_id": "run_4e0551b6b6bc",
+        "run_id": "run_087248fe5474",
         "arm": "payable",
         "task_id": "ms-silent-office",
         "brief": "A silent click mouse for a shared office, wireless via a USB dongle.",
@@ -811,24 +811,24 @@
         "purchased_sku": "MS-OFFICE-SIL-01",
         "expected_sku": "MS-OFFICE-SIL-01",
         "amount_paise": 103120,
-        "order_id": "ord_9f265dfafddf422b",
-        "payment_id": "pay_SIM40ef79b9d4624c",
+        "order_id": "ord_649b1390b1c6410b",
+        "payment_id": "pay_SIM3e4193e20e174e",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 120.23220001719892,
+        "latency_ms": 143.24859995394945,
         "stages": {
-          "discover_ms": 13.674499932676554,
-          "select_ms": 0.01219986006617546,
-          "quote_ms": 8.01400002092123,
-          "order_ms": 8.52659996598959,
-          "pay_ms": 88.72579992748797
+          "discover_ms": 23.722199955955148,
+          "select_ms": 0.019300030544400215,
+          "quote_ms": 13.657999923452735,
+          "order_ms": 12.983799912035465,
+          "pay_ms": 90.73449997231364
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_0754b3700f6d",
+        "run_id": "run_c08797ee2d74",
         "arm": "payable",
         "task_id": "ms-vertical-bt",
         "brief": "Vertical ergonomic mouse for my right hand that pairs over bluetooth.",
@@ -837,24 +837,24 @@
         "purchased_sku": "MS-ERGO-VERT-01",
         "expected_sku": "MS-ERGO-VERT-01",
         "amount_paise": 303720,
-        "order_id": "ord_b93cf5f667124610",
-        "payment_id": "pay_SIM3110ab000b9e45",
+        "order_id": "ord_ce5f3f46e55a4436",
+        "payment_id": "pay_SIM5537cd237d474f",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 160.90729995630682,
+        "latency_ms": 134.60269989445806,
         "stages": {
-          "discover_ms": 22.622300079092383,
-          "select_ms": 0.015600118786096573,
-          "quote_ms": 11.36489980854094,
-          "order_ms": 13.738200068473816,
-          "pay_ms": 110.8099000994116
+          "discover_ms": 14.079099986702204,
+          "select_ms": 0.00800006091594696,
+          "quote_ms": 6.561000132933259,
+          "order_ms": 6.664799991995096,
+          "pay_ms": 106.02649999782443
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_54c17721eac4",
+        "run_id": "run_1e278d692b2b",
         "arm": "payable",
         "task_id": "ms-8k-gaming-oos",
         "brief": "High end gaming mouse with 8000 Hz polling and a 20000+ DPI sensor.",
@@ -868,10 +868,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 29.144000029191375,
+        "latency_ms": 15.004199929535389,
         "stages": {
-          "discover_ms": 25.413600029423833,
-          "select_ms": 0.0070999376475811005,
+          "discover_ms": 13.777999905869365,
+          "select_ms": 0.003600027412176132,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -880,7 +880,7 @@
         "notes": []
       },
       {
-        "run_id": "run_36b0a93409c7",
+        "run_id": "run_4224b2542509",
         "arm": "payable",
         "task_id": "mon-4k-usbc",
         "brief": "27 inch 4K monitor that can charge my laptop over USB-C.",
@@ -889,24 +889,24 @@
         "purchased_sku": "MON-27-4K-IPS",
         "expected_sku": "MON-27-4K-IPS",
         "amount_paise": 3302820,
-        "order_id": "ord_bf8a83a176bc470e",
-        "payment_id": "pay_SIM965f0e7d421844",
+        "order_id": "ord_ca0ef02930994ba5",
+        "payment_id": "pay_SIM8e24972d80c444",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 125.65489998087287,
+        "latency_ms": 95.25529993698001,
         "stages": {
-          "discover_ms": 22.65140018425882,
-          "select_ms": 0.015400117263197899,
-          "quote_ms": 11.142399860545993,
-          "order_ms": 15.294100157916546,
-          "pay_ms": 74.29190003313124
+          "discover_ms": 11.218999978154898,
+          "select_ms": 0.008100178092718124,
+          "quote_ms": 6.20940001681447,
+          "order_ms": 6.689900066703558,
+          "pay_ms": 70.1059999410063
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_f31f995d9073",
+        "run_id": "run_b997dd3314de",
         "arm": "payable",
         "task_id": "mon-165hz-qhd",
         "brief": "1440p gaming monitor, at least 144 Hz refresh rate.",
@@ -915,24 +915,24 @@
         "purchased_sku": "MON-27-QHD-165",
         "expected_sku": "MON-27-QHD-165",
         "amount_paise": 2594820,
-        "order_id": "ord_c3f4e7456b084df9",
-        "payment_id": "pay_SIMe19bd2de94c548",
+        "order_id": "ord_4e740a83e0694e2b",
+        "payment_id": "pay_SIM788bf3d7f84e4b",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 122.0575999468565,
+        "latency_ms": 96.34229983203113,
         "stages": {
-          "discover_ms": 22.17270014807582,
-          "select_ms": 0.017700018361210823,
-          "quote_ms": 11.942700017243624,
-          "order_ms": 13.88829993084073,
-          "pay_ms": 71.70219998806715
+          "discover_ms": 12.452600058168173,
+          "select_ms": 0.008200062438845634,
+          "quote_ms": 6.396199809387326,
+          "order_ms": 6.9766000378876925,
+          "pay_ms": 69.5040998980403
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_dfc6a3d35012",
+        "run_id": "run_09b2e7cb7e13",
         "arm": "payable",
         "task_id": "mon-4k-under-20k",
         "brief": "A 4K monitor under 20000 rupees.",
@@ -946,10 +946,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 32.36730000935495,
+        "latency_ms": 22.016000002622604,
         "stages": {
-          "discover_ms": 27.878900058567524,
-          "select_ms": 0.00509992241859436,
+          "discover_ms": 20.02059994265437,
+          "select_ms": 0.002499902620911598,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -958,7 +958,7 @@
         "notes": []
       },
       {
-        "run_id": "run_a094455e9942",
+        "run_id": "run_e35d37c383f6",
         "arm": "payable",
         "task_id": "dock-dual-hdmi-100w",
         "brief": "USB-C docking station with two HDMI outputs, gigabit ethernet and 100W passthrough charging.",
@@ -967,18 +967,18 @@
         "purchased_sku": "DOCK-USBC-11P",
         "expected_sku": "DOCK-USBC-11P",
         "amount_paise": 765820,
-        "order_id": "ord_c33b8c1e9ea24615",
-        "payment_id": "pay_SIM2b3a4aa12d9740",
+        "order_id": "ord_dc1c06b5535a4d62",
+        "payment_id": "pay_SIMb51ac5a06e264d",
         "http_calls": 6,
         "payment_attempts": 2,
         "payment_declines": 1,
-        "latency_ms": 1106.470299884677,
+        "latency_ms": 231.86239995993674,
         "stages": {
-          "discover_ms": 24.423900060355663,
-          "select_ms": 0.020399922505021095,
-          "quote_ms": 13.393899891525507,
-          "order_ms": 14.178199926391244,
-          "pay_ms": 1050.7561000995338
+          "discover_ms": 14.126800000667572,
+          "select_ms": 0.015300000086426735,
+          "quote_ms": 7.28220003657043,
+          "order_ms": 10.632600169628859,
+          "pay_ms": 198.2488001231104
         },
         "abstain_reason": "",
         "notes": [
@@ -986,7 +986,7 @@
         ]
       },
       {
-        "run_id": "run_f55ff450b8b6",
+        "run_id": "run_f45719c43830",
         "arm": "payable",
         "task_id": "cable-240w-bulk",
         "brief": "Twelve USB-C cables rated for 240W charging, at least 2 metres each.",
@@ -995,18 +995,18 @@
         "purchased_sku": "CAB-USBC-2M-240W",
         "expected_sku": "CAB-USBC-2M-240W",
         "amount_paise": 1118640,
-        "order_id": "ord_c82b553a8b744a4a",
-        "payment_id": "pay_SIM56f0d1025d2f4c",
+        "order_id": "ord_e10e7bd5610c4461",
+        "payment_id": "pay_SIM3825b5297c414a",
         "http_calls": 6,
         "payment_attempts": 2,
         "payment_declines": 1,
-        "latency_ms": 272.9740999639034,
+        "latency_ms": 258.7197998072952,
         "stages": {
-          "discover_ms": 33.67000003345311,
-          "select_ms": 0.02319994382560253,
-          "quote_ms": 16.33020001463592,
-          "order_ms": 15.118899988010526,
-          "pay_ms": 204.35979985632002
+          "discover_ms": 26.4230000320822,
+          "select_ms": 0.022300053387880325,
+          "quote_ms": 13.337499927729368,
+          "order_ms": 14.863000018522143,
+          "pay_ms": 201.36509998701513
         },
         "abstain_reason": "",
         "notes": [
@@ -1014,7 +1014,7 @@
         ]
       },
       {
-        "run_id": "run_055d811f5c0f",
+        "run_id": "run_56d80a32ed5a",
         "arm": "payable",
         "task_id": "kb-red-bulk-shortfall",
         "brief": "Fifteen tenkeyless keyboards with red linear switches for the new lab.",
@@ -1028,11 +1028,11 @@
         "http_calls": 3,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 41.12889990210533,
+        "latency_ms": 48.70240017771721,
         "stages": {
-          "discover_ms": 23.432699963450432,
-          "select_ms": 0.017900019884109497,
-          "quote_ms": 13.248800067231059,
+          "discover_ms": 29.01989989914,
+          "select_ms": 0.02569984644651413,
+          "quote_ms": 14.739200007170439,
           "order_ms": 0.0,
           "pay_ms": 0.0
         },
@@ -1040,7 +1040,7 @@
         "notes": []
       },
       {
-        "run_id": "run_6299211a618b",
+        "run_id": "run_ad14ad4d8e20",
         "arm": "payable",
         "task_id": "nomatch-numpad",
         "brief": "A standalone wireless numeric keypad with 22 keys.",
@@ -1054,10 +1054,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 29.459800105541945,
+        "latency_ms": 33.422699896618724,
         "stages": {
-          "discover_ms": 26.3374000787735,
-          "select_ms": 0.004699919372797012,
+          "discover_ms": 30.16109997406602,
+          "select_ms": 0.005300156772136688,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1066,7 +1066,7 @@
         "notes": []
       },
       {
-        "run_id": "run_e68507064371",
+        "run_id": "run_3a296c55b534",
         "arm": "payable",
         "task_id": "cam-4k-60fps",
         "brief": "A 4K webcam that can record at 60 frames per second.",
@@ -1075,24 +1075,24 @@
         "purchased_sku": "CAM-4K-60",
         "expected_sku": "CAM-4K-60",
         "amount_paise": 1060820,
-        "order_id": "ord_a535dfc1b00440a0",
-        "payment_id": "pay_SIMd6b042ade51647",
+        "order_id": "ord_98a2cd836cf24fd8",
+        "payment_id": "pay_SIM9b4ac30b97b941",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 158.99670007638633,
+        "latency_ms": 174.99700002372265,
         "stages": {
-          "discover_ms": 23.31899991258979,
-          "select_ms": 0.0171000137925148,
-          "quote_ms": 10.72819996625185,
-          "order_ms": 12.626700103282928,
-          "pay_ms": 110.0250999443233
+          "discover_ms": 30.37559986114502,
+          "select_ms": 0.02869986928999424,
+          "quote_ms": 12.877800036221743,
+          "order_ms": 15.063300030305982,
+          "pay_ms": 113.93729993142188
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_3ea7280afbf4",
+        "run_id": "run_a03c95031af1",
         "arm": "payable",
         "task_id": "cam-wide-fov",
         "brief": "Webcam with a privacy shutter and a wide field of view, at least 85 degrees.",
@@ -1101,24 +1101,24 @@
         "purchased_sku": "CAM-4K-60",
         "expected_sku": "CAM-4K-60",
         "amount_paise": 1060820,
-        "order_id": "ord_49e54b63304148b2",
-        "payment_id": "pay_SIM9fd64aea10584f",
+        "order_id": "ord_36b3507d572140b0",
+        "payment_id": "pay_SIMb34c49c4b58c4f",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 154.72610015422106,
+        "latency_ms": 178.21879987604916,
         "stages": {
-          "discover_ms": 21.514299791306257,
-          "select_ms": 0.040400074794888496,
-          "quote_ms": 11.529899900779128,
-          "order_ms": 10.478700045496225,
-          "pay_ms": 108.585299924016
+          "discover_ms": 30.343499965965748,
+          "select_ms": 0.017700018361210823,
+          "quote_ms": 16.692500095814466,
+          "order_ms": 16.32180018350482,
+          "pay_ms": 111.6565999109298
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_baea96795df8",
+        "run_id": "run_5f7f4b4c134d",
         "arm": "payable",
         "task_id": "cam-1080-budget",
         "brief": "Basic 1080p webcam, under 3000 rupees.",
@@ -1127,18 +1127,18 @@
         "purchased_sku": "CAM-1080-30",
         "expected_sku": "CAM-1080-30",
         "amount_paise": 303720,
-        "order_id": "ord_a47cb6915a4d4ffb",
-        "payment_id": "pay_SIMed8c307fad5b41",
+        "order_id": "ord_749422f248d0437a",
+        "payment_id": "pay_SIM6f71ede778c24a",
         "http_calls": 6,
         "payment_attempts": 2,
         "payment_declines": 1,
-        "latency_ms": 245.13830011710525,
+        "latency_ms": 244.61330007761717,
         "stages": {
-          "discover_ms": 21.898899925872684,
-          "select_ms": 0.019300030544400215,
-          "quote_ms": 10.77109994366765,
-          "order_ms": 11.253700125962496,
-          "pay_ms": 199.0755998995155
+          "discover_ms": 21.328900009393692,
+          "select_ms": 0.015800120308995247,
+          "quote_ms": 11.06759998947382,
+          "order_ms": 10.121899889782071,
+          "pay_ms": 199.13850002922118
         },
         "abstain_reason": "",
         "notes": [
@@ -1146,7 +1146,7 @@
         ]
       },
       {
-        "run_id": "run_0c7dfeed5677",
+        "run_id": "run_c938a9e79497",
         "arm": "payable",
         "task_id": "mic-xlr-phantom",
         "brief": "XLR condenser microphone that runs on phantom power.",
@@ -1155,24 +1155,24 @@
         "purchased_sku": "MIC-XLR-COND",
         "expected_sku": "MIC-XLR-COND",
         "amount_paise": 1119820,
-        "order_id": "ord_c855d7fec0694a95",
-        "payment_id": "pay_SIM03d31a62d3994a",
+        "order_id": "ord_317c43d719344a2b",
+        "payment_id": "pay_SIM56ff237bb11646",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 125.5445999559015,
+        "latency_ms": 117.86690005101264,
         "stages": {
-          "discover_ms": 27.54660020582378,
-          "select_ms": 0.017399899661540985,
-          "quote_ms": 13.943600002676249,
-          "order_ms": 12.102099834010005,
-          "pay_ms": 69.24830004572868
+          "discover_ms": 25.4570001270622,
+          "select_ms": 0.015399884432554245,
+          "quote_ms": 10.69859997369349,
+          "order_ms": 11.599500197917223,
+          "pay_ms": 67.87910009734333
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_88f46572819d",
+        "run_id": "run_ab30200df169",
         "arm": "payable",
         "task_id": "mic-usb-monitoring",
         "brief": "USB microphone for podcasting with zero latency headphone monitoring.",
@@ -1181,24 +1181,24 @@
         "purchased_sku": "MIC-USB-CARD",
         "expected_sku": "MIC-USB-CARD",
         "amount_paise": 706820,
-        "order_id": "ord_5e7c9186a6ed4862",
-        "payment_id": "pay_SIMadf55ae786bc4b",
+        "order_id": "ord_fc6ec354314c4f61",
+        "payment_id": "pay_SIM313105a9f6034a",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 143.7229998409748,
+        "latency_ms": 140.54220006801188,
         "stages": {
-          "discover_ms": 23.94709992222488,
-          "select_ms": 0.01919991336762905,
-          "quote_ms": 9.370499989017844,
-          "order_ms": 12.579899979755282,
-          "pay_ms": 95.51519993692636
+          "discover_ms": 19.075500080361962,
+          "select_ms": 0.013699987903237343,
+          "quote_ms": 12.827900005504489,
+          "order_ms": 11.63380010984838,
+          "pay_ms": 95.14450002461672
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_e9a6f9361e26",
+        "run_id": "run_118c33399670",
         "arm": "payable",
         "task_id": "mic-boom-trap",
         "brief": "Microphone that ships with a boom arm included.",
@@ -1212,10 +1212,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 26.80810005404055,
+        "latency_ms": 29.62770010344684,
         "stages": {
-          "discover_ms": 23.47579994238913,
-          "select_ms": 0.004699919372797012,
+          "discover_ms": 26.555699994787574,
+          "select_ms": 0.004899920895695686,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1224,7 +1224,7 @@
         "notes": []
       },
       {
-        "run_id": "run_330e51ac1f65",
+        "run_id": "run_b03d502649ff",
         "arm": "payable",
         "task_id": "ssd-2tb-fast",
         "brief": "Portable 2TB SSD with sequential reads of at least 1500 MB/s.",
@@ -1233,24 +1233,24 @@
         "purchased_sku": "SSD-2TB-NVME",
         "expected_sku": "SSD-2TB-NVME",
         "amount_paise": 1532820,
-        "order_id": "ord_3ef88c6f7c9040de",
-        "payment_id": "pay_SIM85b6e5cba7cf44",
+        "order_id": "ord_b07e5830c31140bf",
+        "payment_id": "pay_SIM289808647d0949",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 162.02260018326342,
+        "latency_ms": 163.35189994424582,
         "stages": {
-          "discover_ms": 20.153900142759085,
-          "select_ms": 0.018600141629576683,
-          "quote_ms": 11.729700025171041,
-          "order_ms": 11.988100130110979,
-          "pay_ms": 116.22940003871918
+          "discover_ms": 21.14389999769628,
+          "select_ms": 0.016600126400589943,
+          "quote_ms": 10.514700086787343,
+          "order_ms": 13.130699982866645,
+          "pay_ms": 116.41370016150177
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_b9d2446f359a",
+        "run_id": "run_fef2a618c3d6",
         "arm": "payable",
         "task_id": "ssd-encrypted-1tb",
         "brief": "1TB portable SSD with hardware AES encryption.",
@@ -1259,18 +1259,18 @@
         "purchased_sku": "SSD-1TB-NVME",
         "expected_sku": "SSD-1TB-NVME",
         "amount_paise": 883820,
-        "order_id": "ord_30ccc6b1e19d451a",
-        "payment_id": "pay_SIM20b867de60b849",
+        "order_id": "ord_b4f4ce4e4b4a4959",
+        "payment_id": "pay_SIMdd470bdd0c8f4f",
         "http_calls": 6,
         "payment_attempts": 2,
         "payment_declines": 1,
-        "latency_ms": 249.8574999626726,
+        "latency_ms": 239.195000147447,
         "stages": {
-          "discover_ms": 24.402499897405505,
-          "select_ms": 0.01719989813864231,
-          "quote_ms": 12.645799899473786,
-          "order_ms": 13.431099941954017,
-          "pay_ms": 197.2735000308603
+          "discover_ms": 20.454399986192584,
+          "select_ms": 0.013800105080008507,
+          "quote_ms": 10.117599973455071,
+          "order_ms": 11.46050007082522,
+          "pay_ms": 195.06560009904206
         },
         "abstain_reason": "",
         "notes": [
@@ -1278,7 +1278,7 @@
         ]
       },
       {
-        "run_id": "run_9dd0dceebf6d",
+        "run_id": "run_b348f3f395a4",
         "arm": "payable",
         "task_id": "ssd-3000-read-trap",
         "brief": "Portable SSD reading at 3000 MB/s or faster.",
@@ -1292,10 +1292,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 21.865200018510222,
+        "latency_ms": 23.05509988218546,
         "stages": {
-          "discover_ms": 19.050000002607703,
-          "select_ms": 0.004400033503770828,
+          "discover_ms": 20.15129989013076,
+          "select_ms": 0.0037997961044311523,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1304,7 +1304,7 @@
         "notes": []
       },
       {
-        "run_id": "run_baa5348acb0e",
+        "run_id": "run_8de6a4cf0f80",
         "arm": "payable",
         "task_id": "ssd-ambiguous",
         "brief": "Portable SSD with hardware encryption and a shock rating.",
@@ -1318,10 +1318,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 27.058499865233898,
+        "latency_ms": 25.25399997830391,
         "stages": {
-          "discover_ms": 23.803400108590722,
-          "select_ms": 0.003400025889277458,
+          "discover_ms": 21.917699836194515,
+          "select_ms": 0.0032999087125062943,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1330,7 +1330,7 @@
         "notes": []
       },
       {
-        "run_id": "run_07b8fbd231bc",
+        "run_id": "run_a627dfdf6913",
         "arm": "payable",
         "task_id": "stand-alu-8kg",
         "brief": "Adjustable aluminium laptop stand rated to hold at least 8 kg.",
@@ -1339,24 +1339,24 @@
         "purchased_sku": "STAND-ALU-ADJ",
         "expected_sku": "STAND-ALU-ADJ",
         "amount_paise": 362720,
-        "order_id": "ord_bf5be07c8b5b423e",
-        "payment_id": "pay_SIM5b838c79a1a848",
+        "order_id": "ord_b97d995fd2fa4a79",
+        "payment_id": "pay_SIM2f08a99593dc47",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 129.7176000662148,
+        "latency_ms": 131.0391000006348,
         "stages": {
-          "discover_ms": 20.658399909734726,
-          "select_ms": 0.014299992471933365,
-          "quote_ms": 10.093999793753028,
-          "order_ms": 11.946199927479029,
-          "pay_ms": 84.80160008184612
+          "discover_ms": 19.845000002533197,
+          "select_ms": 0.015300000086426735,
+          "quote_ms": 9.235400008037686,
+          "order_ms": 12.734099989756942,
+          "pay_ms": 86.86300017870963
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_a6549db41cc8",
+        "run_id": "run_335a356c6779",
         "arm": "payable",
         "task_id": "hub-powered-trap",
         "brief": "A four port USB-A hub with its own external power supply.",
@@ -1370,10 +1370,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 23.185899946838617,
+        "latency_ms": 27.73720002733171,
         "stages": {
-          "discover_ms": 19.857700215652585,
-          "select_ms": 0.003400025889277458,
+          "discover_ms": 24.40380002371967,
+          "select_ms": 0.00400003045797348,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1382,7 +1382,7 @@
         "notes": []
       },
       {
-        "run_id": "run_7f963c2509c0",
+        "run_id": "run_efcfc1db0627",
         "arm": "payable",
         "task_id": "kvm-4k-2port",
         "brief": "Two port KVM switch that supports 4K output.",
@@ -1391,18 +1391,18 @@
         "purchased_sku": "KVM-2P-4K",
         "expected_sku": "KVM-2P-4K",
         "amount_paise": 539720,
-        "order_id": "ord_5f5f3001b0f64134",
-        "payment_id": "pay_SIM2aac5d41463c46",
+        "order_id": "ord_19c28f3c339d477d",
+        "payment_id": "pay_SIM3943c7694dba46",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 121.35979998856783,
+        "latency_ms": 121.36880005709827,
         "stages": {
-          "discover_ms": 20.1598999556154,
-          "select_ms": 0.014800112694501877,
-          "quote_ms": 11.394300032407045,
-          "order_ms": 11.562800034880638,
-          "pay_ms": 76.29139977507293
+          "discover_ms": 19.453000044450164,
+          "select_ms": 0.01850002445280552,
+          "quote_ms": 11.740100104361773,
+          "order_ms": 11.292400071397424,
+          "pay_ms": 76.44689991138875
         },
         "abstain_reason": "",
         "notes": []
@@ -1410,7 +1410,7 @@
     ],
     "legacy-strict": [
       {
-        "run_id": "run_6b2d67dbfc12",
+        "run_id": "run_cd8f88c8c343",
         "arm": "legacy-strict",
         "task_id": "kb-tkl-brown-bt",
         "brief": "I want a tenkeyless mechanical keyboard with tactile brown switches that I can use over bluetooth.",
@@ -1419,24 +1419,24 @@
         "purchased_sku": "KB-MECH-87-BRN",
         "expected_sku": "KB-MECH-87-BRN",
         "amount_paise": 647800,
-        "order_id": "order_SIMaee15789007f44",
-        "payment_id": "pay_SIM99597df14da04d",
+        "order_id": "order_SIM6be88d22a53248",
+        "payment_id": "pay_SIMc9466be502eb40",
         "http_calls": 7,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 193.44559987075627,
+        "latency_ms": 197.64780020341277,
         "stages": {
-          "discover_ms": 13.975099893286824,
-          "select_ms": 50.57920003309846,
-          "quote_ms": 14.41149995662272,
+          "discover_ms": 13.969799969345331,
+          "select_ms": 54.20170002616942,
+          "quote_ms": 13.433799846097827,
           "order_ms": 0.0,
-          "pay_ms": 112.48580017127097
+          "pay_ms": 113.82089997641742
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_2c0ae48e7f06",
+        "run_id": "run_4ae15c340cfb",
         "arm": "legacy-strict",
         "task_id": "kb-wired-hotswap-rgb",
         "brief": "Full size mechanical keyboard, hot swappable, RGB backlight, wired only - no bluetooth radio in this office.",
@@ -1445,24 +1445,24 @@
         "purchased_sku": "KB-MECH-104-BRN",
         "expected_sku": "KB-MECH-104-BRN",
         "amount_paise": 730400,
-        "order_id": "order_SIMd50477b479c84f",
-        "payment_id": "pay_SIM11d6013d652b44",
+        "order_id": "order_SIMfaced750b2c247",
+        "payment_id": "pay_SIMcfb96050ee2e4f",
         "http_calls": 7,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 192.80720013193786,
+        "latency_ms": 195.91799983754754,
         "stages": {
-          "discover_ms": 13.586200075224042,
-          "select_ms": 48.71389991603792,
-          "quote_ms": 12.596799992024899,
+          "discover_ms": 13.532300014048815,
+          "select_ms": 52.33640014193952,
+          "quote_ms": 13.777700020000339,
           "order_ms": 0.0,
-          "pay_ms": 115.83060002885759
+          "pay_ms": 114.02230011299253
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_70d6ad9cadd6",
+        "run_id": "run_dcb127409641",
         "arm": "legacy-strict",
         "task_id": "kb-ambiguous-tkl",
         "brief": "Get me a hot swappable tenkeyless keyboard with bluetooth.",
@@ -1471,24 +1471,24 @@
         "purchased_sku": "KB-MECH-87-BRN",
         "expected_sku": null,
         "amount_paise": 647800,
-        "order_id": "order_SIM6dd57d7cf38048",
-        "payment_id": "pay_SIM215dab0be5064e",
+        "order_id": "order_SIMddd32a000f354d",
+        "payment_id": "pay_SIMcd9d5bc0e09c48",
         "http_calls": 7,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 193.62360006198287,
+        "latency_ms": 186.76059995777905,
         "stages": {
-          "discover_ms": 13.372600078582764,
-          "select_ms": 52.01660003513098,
-          "quote_ms": 12.76850001886487,
+          "discover_ms": 11.916799936443567,
+          "select_ms": 48.091899836435914,
+          "quote_ms": 12.371200136840343,
           "order_ms": 0.0,
-          "pay_ms": 113.52180014364421
+          "pay_ms": 111.85059999115765
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_e86ef1f0a073",
+        "run_id": "run_d01b97e1be04",
         "arm": "legacy-strict",
         "task_id": "hp-anc-depth-40",
         "brief": "Wireless noise cancelling headphones for long flights, I need at least 40 dB of cancellation.",
@@ -1502,10 +1502,10 @@
         "http_calls": 4,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 54.507700027897954,
+        "latency_ms": 60.216099955141544,
         "stages": {
-          "discover_ms": 12.982300017029047,
-          "select_ms": 38.615299854427576,
+          "discover_ms": 17.233200138434768,
+          "select_ms": 38.93549996428192,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1514,7 +1514,7 @@
         "notes": []
       },
       {
-        "run_id": "run_78218743c102",
+        "run_id": "run_ca81adddf8fd",
         "arm": "legacy-strict",
         "task_id": "hp-ldac-overear",
         "brief": "Over ear noise cancelling headphones that support LDAC for hi-res audio.",
@@ -1528,10 +1528,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 27.319000102579594,
+        "latency_ms": 35.20719986408949,
         "stages": {
-          "discover_ms": 12.500900076702237,
-          "select_ms": 11.582199949771166,
+          "discover_ms": 15.52750007249415,
+          "select_ms": 16.01459993980825,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1540,7 +1540,7 @@
         "notes": []
       },
       {
-        "run_id": "run_1a3720f56878",
+        "run_id": "run_f7a2120ddacc",
         "arm": "legacy-strict",
         "task_id": "hp-tws-30h-budget",
         "brief": "ANC earbuds under 5000 rupees with at least 30 hours of total battery.",
@@ -1554,10 +1554,10 @@
         "http_calls": 3,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 39.65159994550049,
+        "latency_ms": 39.543099934235215,
         "stages": {
-          "discover_ms": 13.581100152805448,
-          "select_ms": 23.36520003154874,
+          "discover_ms": 12.45760009624064,
+          "select_ms": 24.2937000002712,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1566,7 +1566,7 @@
         "notes": []
       },
       {
-        "run_id": "run_0623181574e4",
+        "run_id": "run_bb73b0e1eb05",
         "arm": "legacy-strict",
         "task_id": "ms-silent-office",
         "brief": "A silent click mouse for a shared office, wireless via a USB dongle.",
@@ -1575,24 +1575,24 @@
         "purchased_sku": "MS-OFFICE-SIL-01",
         "expected_sku": "MS-OFFICE-SIL-01",
         "amount_paise": 103100,
-        "order_id": "order_SIMf67deb446b6540",
-        "payment_id": "pay_SIM3d4f8db39f1340",
+        "order_id": "order_SIMf07dc40d96064a",
+        "payment_id": "pay_SIM15a0c0d7a50048",
         "http_calls": 6,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 158.6854001507163,
+        "latency_ms": 167.84780006855726,
         "stages": {
-          "discover_ms": 12.53279997035861,
-          "select_ms": 35.439099883660674,
-          "quote_ms": 14.30050004273653,
+          "discover_ms": 13.270099880173802,
+          "select_ms": 42.89850010536611,
+          "quote_ms": 14.650499913841486,
           "order_ms": 0.0,
-          "pay_ms": 94.43379985168576
+          "pay_ms": 94.93370004929602
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_93002f9124ba",
+        "run_id": "run_af1698efead3",
         "arm": "legacy-strict",
         "task_id": "ms-vertical-bt",
         "brief": "Vertical ergonomic mouse for my right hand that pairs over bluetooth.",
@@ -1601,24 +1601,24 @@
         "purchased_sku": "MS-ERGO-VERT-01",
         "expected_sku": "MS-ERGO-VERT-01",
         "amount_paise": 303700,
-        "order_id": "order_SIM658bd422b12547",
-        "payment_id": "pay_SIM18bc5d297ae94f",
+        "order_id": "order_SIM2adf5780bd9e4d",
+        "payment_id": "pay_SIMe0b9fd8453d241",
         "http_calls": 6,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 178.62380016595125,
+        "latency_ms": 184.10139996558428,
         "stages": {
-          "discover_ms": 13.857099926099181,
-          "select_ms": 40.292700054124,
-          "quote_ms": 11.079300194978714,
+          "discover_ms": 12.926600174978375,
+          "select_ms": 37.430800031870604,
+          "quote_ms": 20.138599909842014,
           "order_ms": 0.0,
-          "pay_ms": 111.26579996198416
+          "pay_ms": 111.19419988244772
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_535c3418ac5c",
+        "run_id": "run_06209e2b348c",
         "arm": "legacy-strict",
         "task_id": "ms-8k-gaming-oos",
         "brief": "High end gaming mouse with 8000 Hz polling and a 20000+ DPI sensor.",
@@ -1632,10 +1632,10 @@
         "http_calls": 4,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 57.41350003518164,
+        "latency_ms": 56.166799971833825,
         "stages": {
-          "discover_ms": 15.137500129640102,
-          "select_ms": 39.50939979404211,
+          "discover_ms": 12.490900000557303,
+          "select_ms": 40.51510011777282,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1644,7 +1644,7 @@
         "notes": []
       },
       {
-        "run_id": "run_2b2ad02a14dd",
+        "run_id": "run_fbee06a7fa8d",
         "arm": "legacy-strict",
         "task_id": "mon-4k-usbc",
         "brief": "27 inch 4K monitor that can charge my laptop over USB-C.",
@@ -1653,24 +1653,24 @@
         "purchased_sku": "MON-27-4K-IPS",
         "expected_sku": "MON-27-4K-IPS",
         "amount_paise": 3302800,
-        "order_id": "order_SIMceb5d0cae4314d",
-        "payment_id": "pay_SIMcfad6efe6e8741",
+        "order_id": "order_SIMeb871e1c566942",
+        "payment_id": "pay_SIM30caa444267540",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 132.90699990466237,
+        "latency_ms": 128.16149997524917,
         "stages": {
-          "discover_ms": 13.826899928972125,
-          "select_ms": 26.957899797707796,
-          "quote_ms": 13.322799932211637,
+          "discover_ms": 12.29869993403554,
+          "select_ms": 26.27579984255135,
+          "quote_ms": 11.902299942448735,
           "order_ms": 0.0,
-          "pay_ms": 76.89959998242557
+          "pay_ms": 75.81770000979304
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_2232ceda7d93",
+        "run_id": "run_88e521185f4a",
         "arm": "legacy-strict",
         "task_id": "mon-165hz-qhd",
         "brief": "1440p gaming monitor, at least 144 Hz refresh rate.",
@@ -1679,24 +1679,24 @@
         "purchased_sku": "MON-27-QHD-165",
         "expected_sku": "MON-27-QHD-165",
         "amount_paise": 2594800,
-        "order_id": "order_SIMec18490f11b24f",
-        "payment_id": "pay_SIMf51fc1f23f884c",
+        "order_id": "order_SIM1e6c6b5412114b",
+        "payment_id": "pay_SIM04859bbcefcc45",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 127.88580008782446,
+        "latency_ms": 143.75279983505607,
         "stages": {
-          "discover_ms": 13.269499875605106,
-          "select_ms": 26.036000112071633,
-          "quote_ms": 12.935400009155273,
+          "discover_ms": 20.239199977368116,
+          "select_ms": 34.69579992815852,
+          "quote_ms": 14.061999972909689,
           "order_ms": 0.0,
-          "pay_ms": 73.81299999542534
+          "pay_ms": 72.71580002270639
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_180e595bba09",
+        "run_id": "run_30ab46db4267",
         "arm": "legacy-strict",
         "task_id": "mon-4k-under-20k",
         "brief": "A 4K monitor under 20000 rupees.",
@@ -1710,10 +1710,10 @@
         "http_calls": 3,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 41.45379993133247,
+        "latency_ms": 45.58619996532798,
         "stages": {
-          "discover_ms": 14.219700125977397,
-          "select_ms": 24.131400045007467,
+          "discover_ms": 11.219399981200695,
+          "select_ms": 30.290600145235658,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1722,7 +1722,7 @@
         "notes": []
       },
       {
-        "run_id": "run_6d6a4b5d572b",
+        "run_id": "run_a7cafd7a077b",
         "arm": "legacy-strict",
         "task_id": "dock-dual-hdmi-100w",
         "brief": "USB-C docking station with two HDMI outputs, gigabit ethernet and 100W passthrough charging.",
@@ -1736,10 +1736,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 27.558400062844157,
+        "latency_ms": 37.19890001229942,
         "stages": {
-          "discover_ms": 13.666799990460277,
-          "select_ms": 10.911700082942843,
+          "discover_ms": 13.875700067728758,
+          "select_ms": 18.984900088980794,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1748,7 +1748,7 @@
         "notes": []
       },
       {
-        "run_id": "run_f65f0dc27420",
+        "run_id": "run_0353c66656e2",
         "arm": "legacy-strict",
         "task_id": "cable-240w-bulk",
         "brief": "Twelve USB-C cables rated for 240W charging, at least 2 metres each.",
@@ -1762,10 +1762,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 26.923099998384714,
+        "latency_ms": 34.64560001157224,
         "stages": {
-          "discover_ms": 12.557900045067072,
-          "select_ms": 11.015300173312426,
+          "discover_ms": 18.164499895647168,
+          "select_ms": 12.755699921399355,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1774,7 +1774,7 @@
         "notes": []
       },
       {
-        "run_id": "run_e66d7ce943cf",
+        "run_id": "run_6741b9ec9880",
         "arm": "legacy-strict",
         "task_id": "kb-red-bulk-shortfall",
         "brief": "Fifteen tenkeyless keyboards with red linear switches for the new lab.",
@@ -1788,13 +1788,13 @@
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 68.00250010564923,
+        "latency_ms": 64.9254999589175,
         "stages": {
-          "discover_ms": 14.66080010868609,
-          "select_ms": 25.313900085166097,
-          "quote_ms": 11.717900168150663,
+          "discover_ms": 14.070600038394332,
+          "select_ms": 24.66150000691414,
+          "quote_ms": 11.770500103011727,
           "order_ms": 0.0,
-          "pay_ms": 12.71390006877482
+          "pay_ms": 10.921399807557464
         },
         "abstain_reason": "checkout did not confirm",
         "notes": [
@@ -1802,7 +1802,7 @@
         ]
       },
       {
-        "run_id": "run_111c6cf33837",
+        "run_id": "run_ed13dce3c0b9",
         "arm": "legacy-strict",
         "task_id": "nomatch-numpad",
         "brief": "A standalone wireless numeric keypad with 22 keys.",
@@ -1816,10 +1816,10 @@
         "http_calls": 4,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 52.040499867871404,
+        "latency_ms": 47.10770002566278,
         "stages": {
-          "discover_ms": 13.752599945291877,
-          "select_ms": 35.53059999831021,
+          "discover_ms": 10.6736000161618,
+          "select_ms": 33.61409995704889,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1828,7 +1828,7 @@
         "notes": []
       },
       {
-        "run_id": "run_b260bc701ee4",
+        "run_id": "run_f0cf49b80335",
         "arm": "legacy-strict",
         "task_id": "cam-4k-60fps",
         "brief": "A 4K webcam that can record at 60 frames per second.",
@@ -1837,24 +1837,24 @@
         "purchased_sku": "CAM-4K-60",
         "expected_sku": "CAM-4K-60",
         "amount_paise": 1060800,
-        "order_id": "order_SIMeed405ce695646",
-        "payment_id": "pay_SIM94e0213a30e74f",
+        "order_id": "order_SIM858e9181c1f645",
+        "payment_id": "pay_SIMf5249bb8e3fd4c",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 167.327799834311,
+        "latency_ms": 164.48609996587038,
         "stages": {
-          "discover_ms": 14.141999883577228,
-          "select_ms": 26.620799908414483,
-          "quote_ms": 12.965900124982,
+          "discover_ms": 12.708600144833326,
+          "select_ms": 23.419600212946534,
+          "quote_ms": 11.540600098669529,
           "order_ms": 0.0,
-          "pay_ms": 111.47500015795231
+          "pay_ms": 114.79989998042583
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_6bfe6818a3b6",
+        "run_id": "run_ffed05fe845b",
         "arm": "legacy-strict",
         "task_id": "cam-wide-fov",
         "brief": "Webcam with a privacy shutter and a wide field of view, at least 85 degrees.",
@@ -1868,10 +1868,10 @@
         "http_calls": 3,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 39.971299935132265,
+        "latency_ms": 60.30310015194118,
         "stages": {
-          "discover_ms": 12.951400130987167,
-          "select_ms": 24.429399985820055,
+          "discover_ms": 20.621499978005886,
+          "select_ms": 34.92429992184043,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1880,7 +1880,7 @@
         "notes": []
       },
       {
-        "run_id": "run_b2a9b856738e",
+        "run_id": "run_3702b94f3382",
         "arm": "legacy-strict",
         "task_id": "cam-1080-budget",
         "brief": "Basic 1080p webcam, under 3000 rupees.",
@@ -1889,18 +1889,18 @@
         "purchased_sku": "CAM-1080-30",
         "expected_sku": "CAM-1080-30",
         "amount_paise": 303700,
-        "order_id": "order_SIM76f7ee9c7d2b47",
-        "payment_id": "pay_SIM3a23bcb21a6a40",
+        "order_id": "order_SIM3dd2d6ff94ea4d",
+        "payment_id": "pay_SIMd78d0282381941",
         "http_calls": 7,
         "payment_attempts": 2,
         "payment_declines": 1,
-        "latency_ms": 264.59449995309114,
+        "latency_ms": 289.88789999857545,
         "stages": {
-          "discover_ms": 12.552800122648478,
-          "select_ms": 22.046699887141585,
-          "quote_ms": 12.293099891394377,
+          "discover_ms": 11.5021001547575,
+          "select_ms": 27.93270000256598,
+          "quote_ms": 20.76600003056228,
           "order_ms": 0.0,
-          "pay_ms": 215.6146999914199
+          "pay_ms": 226.10160009935498
         },
         "abstain_reason": "",
         "notes": [
@@ -1908,7 +1908,7 @@
         ]
       },
       {
-        "run_id": "run_60b8ae84f419",
+        "run_id": "run_2cfc02393ece",
         "arm": "legacy-strict",
         "task_id": "mic-xlr-phantom",
         "brief": "XLR condenser microphone that runs on phantom power.",
@@ -1917,24 +1917,24 @@
         "purchased_sku": "MIC-XLR-COND",
         "expected_sku": "MIC-XLR-COND",
         "amount_paise": 1119800,
-        "order_id": "order_SIMb72011453dcd4f",
-        "payment_id": "pay_SIMe3026042d55643",
+        "order_id": "order_SIMdd5ac87463dc42",
+        "payment_id": "pay_SIM28ac59a6026343",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 116.9114001095295,
+        "latency_ms": 169.30900001898408,
         "stages": {
-          "discover_ms": 10.917600011453032,
-          "select_ms": 23.214900167658925,
-          "quote_ms": 11.37740002013743,
+          "discover_ms": 18.7975000590086,
+          "select_ms": 41.057199938222766,
+          "quote_ms": 25.492300046607852,
           "order_ms": 0.0,
-          "pay_ms": 69.40999999642372
+          "pay_ms": 79.88600013777614
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_718830ac8bab",
+        "run_id": "run_afce152a1fd0",
         "arm": "legacy-strict",
         "task_id": "mic-usb-monitoring",
         "brief": "USB microphone for podcasting with zero latency headphone monitoring.",
@@ -1948,10 +1948,10 @@
         "http_calls": 3,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 36.90989990718663,
+        "latency_ms": 39.59479997865856,
         "stages": {
-          "discover_ms": 12.714399956166744,
-          "select_ms": 21.229600068181753,
+          "discover_ms": 12.271000072360039,
+          "select_ms": 24.531099945306778,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1960,7 +1960,7 @@
         "notes": []
       },
       {
-        "run_id": "run_36548da85021",
+        "run_id": "run_10f986ce11b5",
         "arm": "legacy-strict",
         "task_id": "mic-boom-trap",
         "brief": "Microphone that ships with a boom arm included.",
@@ -1974,10 +1974,10 @@
         "http_calls": 3,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 39.7552999202162,
+        "latency_ms": 44.03440002351999,
         "stages": {
-          "discover_ms": 11.672299820929766,
-          "select_ms": 25.118099991232157,
+          "discover_ms": 13.341100187972188,
+          "select_ms": 26.849100133404136,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -1986,7 +1986,7 @@
         "notes": []
       },
       {
-        "run_id": "run_5edf9d1a2396",
+        "run_id": "run_e75c9ce85a72",
         "arm": "legacy-strict",
         "task_id": "ssd-2tb-fast",
         "brief": "Portable 2TB SSD with sequential reads of at least 1500 MB/s.",
@@ -2000,10 +2000,10 @@
         "http_calls": 3,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 39.02649995870888,
+        "latency_ms": 51.50629999116063,
         "stages": {
-          "discover_ms": 14.088699826970696,
-          "select_ms": 22.363200085237622,
+          "discover_ms": 18.472899915650487,
+          "select_ms": 28.715400025248528,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -2012,7 +2012,7 @@
         "notes": []
       },
       {
-        "run_id": "run_a9f7585097e2",
+        "run_id": "run_62756f13f4ec",
         "arm": "legacy-strict",
         "task_id": "ssd-encrypted-1tb",
         "brief": "1TB portable SSD with hardware AES encryption.",
@@ -2026,10 +2026,10 @@
         "http_calls": 3,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 36.283399909734726,
+        "latency_ms": 45.28079996816814,
         "stages": {
-          "discover_ms": 11.598000070080161,
-          "select_ms": 21.935900207608938,
+          "discover_ms": 11.96400006301701,
+          "select_ms": 29.363600071519613,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -2038,7 +2038,7 @@
         "notes": []
       },
       {
-        "run_id": "run_80684f7e9f2d",
+        "run_id": "run_b80c3b94d134",
         "arm": "legacy-strict",
         "task_id": "ssd-3000-read-trap",
         "brief": "Portable SSD reading at 3000 MB/s or faster.",
@@ -2052,10 +2052,10 @@
         "http_calls": 3,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 35.24589980952442,
+        "latency_ms": 45.90789997018874,
         "stages": {
-          "discover_ms": 10.879999957978725,
-          "select_ms": 21.618699887767434,
+          "discover_ms": 14.76829987950623,
+          "select_ms": 27.47619990259409,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -2064,7 +2064,7 @@
         "notes": []
       },
       {
-        "run_id": "run_11ce4d24298b",
+        "run_id": "run_58e87f1617a2",
         "arm": "legacy-strict",
         "task_id": "ssd-ambiguous",
         "brief": "Portable SSD with hardware encryption and a shock rating.",
@@ -2078,10 +2078,10 @@
         "http_calls": 3,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 36.30560007877648,
+        "latency_ms": 47.07579989917576,
         "stages": {
-          "discover_ms": 10.850700084120035,
-          "select_ms": 22.511200048029423,
+          "discover_ms": 15.05309995263815,
+          "select_ms": 27.721900027245283,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -2090,7 +2090,7 @@
         "notes": []
       },
       {
-        "run_id": "run_0ee32de207df",
+        "run_id": "run_f665fa5f02b1",
         "arm": "legacy-strict",
         "task_id": "stand-alu-8kg",
         "brief": "Adjustable aluminium laptop stand rated to hold at least 8 kg.",
@@ -2104,10 +2104,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 24.454500060528517,
+        "latency_ms": 44.96919992379844,
         "stages": {
-          "discover_ms": 11.128900106996298,
-          "select_ms": 10.533200111240149,
+          "discover_ms": 20.263800164684653,
+          "select_ms": 19.259799970313907,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -2116,7 +2116,7 @@
         "notes": []
       },
       {
-        "run_id": "run_20ed21b72c01",
+        "run_id": "run_37e9195e4f9f",
         "arm": "legacy-strict",
         "task_id": "hub-powered-trap",
         "brief": "A four port USB-A hub with its own external power supply.",
@@ -2130,10 +2130,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 26.222100015729666,
+        "latency_ms": 37.08429983817041,
         "stages": {
-          "discover_ms": 11.245200177654624,
-          "select_ms": 11.592900147661567,
+          "discover_ms": 19.19290004298091,
+          "select_ms": 14.38820012845099,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -2142,7 +2142,7 @@
         "notes": []
       },
       {
-        "run_id": "run_5676eb0b83a0",
+        "run_id": "run_c014d6a5d2a4",
         "arm": "legacy-strict",
         "task_id": "kvm-4k-2port",
         "brief": "Two port KVM switch that supports 4K output.",
@@ -2151,18 +2151,18 @@
         "purchased_sku": "KVM-2P-4K",
         "expected_sku": "KVM-2P-4K",
         "amount_paise": 539700,
-        "order_id": "order_SIM7e4531203b7442",
-        "payment_id": "pay_SIM98cc4f26883f46",
+        "order_id": "order_SIM403ce97da2a549",
+        "payment_id": "pay_SIM5f9208d3dfed41",
         "http_calls": 4,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 127.24870000965893,
+        "latency_ms": 123.5205999109894,
         "stages": {
-          "discover_ms": 15.40730008855462,
-          "select_ms": 13.378199888393283,
-          "quote_ms": 14.83570015989244,
+          "discover_ms": 13.475399930030107,
+          "select_ms": 13.562200125306845,
+          "quote_ms": 14.098700135946274,
           "order_ms": 0.0,
-          "pay_ms": 81.28680009394884
+          "pay_ms": 79.86909989267588
         },
         "abstain_reason": "",
         "notes": []
@@ -2170,7 +2170,7 @@
     ],
     "legacy-optimistic": [
       {
-        "run_id": "run_9fba529c80ef",
+        "run_id": "run_e0cf7fe3a1e6",
         "arm": "legacy-optimistic",
         "task_id": "kb-tkl-brown-bt",
         "brief": "I want a tenkeyless mechanical keyboard with tactile brown switches that I can use over bluetooth.",
@@ -2179,24 +2179,24 @@
         "purchased_sku": "KB-MECH-87-BRN",
         "expected_sku": "KB-MECH-87-BRN",
         "amount_paise": 647800,
-        "order_id": "order_SIMe82c439765a640",
-        "payment_id": "pay_SIM2da2444dbc4241",
+        "order_id": "order_SIM078b43568e5b44",
+        "payment_id": "pay_SIM0e112d23fecb4c",
         "http_calls": 7,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 182.5360998045653,
+        "latency_ms": 235.2151998784393,
         "stages": {
-          "discover_ms": 12.666600057855248,
-          "select_ms": 45.475800056010485,
-          "quote_ms": 11.209100019186735,
+          "discover_ms": 18.49619997665286,
+          "select_ms": 73.33520008251071,
+          "quote_ms": 24.842800106853247,
           "order_ms": 0.0,
-          "pay_ms": 111.23590008355677
+          "pay_ms": 114.62040012702346
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_aeb1fa1adc42",
+        "run_id": "run_1263ecc23ece",
         "arm": "legacy-optimistic",
         "task_id": "kb-wired-hotswap-rgb",
         "brief": "Full size mechanical keyboard, hot swappable, RGB backlight, wired only - no bluetooth radio in this office.",
@@ -2205,24 +2205,24 @@
         "purchased_sku": "KB-MECH-104-BRN",
         "expected_sku": "KB-MECH-104-BRN",
         "amount_paise": 730400,
-        "order_id": "order_SIMb4e2556af2fd4b",
-        "payment_id": "pay_SIM64750e81e6484d",
+        "order_id": "order_SIM5ebf4b34e80942",
+        "payment_id": "pay_SIMde0b11d827d746",
         "http_calls": 7,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 188.50330007262528,
+        "latency_ms": 209.27860005758703,
         "stages": {
-          "discover_ms": 11.98319997638464,
-          "select_ms": 47.472599893808365,
-          "quote_ms": 12.063900008797646,
+          "discover_ms": 12.819099938496947,
+          "select_ms": 63.87909990735352,
+          "quote_ms": 12.309700017794967,
           "order_ms": 0.0,
-          "pay_ms": 114.76719984784722
+          "pay_ms": 117.40650003775954
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_1d8b395bf0ff",
+        "run_id": "run_311211e436db",
         "arm": "legacy-optimistic",
         "task_id": "kb-ambiguous-tkl",
         "brief": "Get me a hot swappable tenkeyless keyboard with bluetooth.",
@@ -2231,24 +2231,24 @@
         "purchased_sku": "KB-MECH-87-BRN",
         "expected_sku": null,
         "amount_paise": 647800,
-        "order_id": "order_SIM35a5cf7afcbc4b",
-        "payment_id": "pay_SIMfd1615349cd14f",
+        "order_id": "order_SIMb9eae7c0cfcb48",
+        "payment_id": "pay_SIM01477b703c0945",
         "http_calls": 7,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 201.5788999851793,
+        "latency_ms": 183.86409990489483,
         "stages": {
-          "discover_ms": 11.876799864694476,
-          "select_ms": 60.0123000331223,
-          "quote_ms": 13.964199926704168,
+          "discover_ms": 13.46230017952621,
+          "select_ms": 44.24620000645518,
+          "quote_ms": 13.099899981170893,
           "order_ms": 0.0,
-          "pay_ms": 113.70679992251098
+          "pay_ms": 111.11479997634888
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_59797ce76b5a",
+        "run_id": "run_44618ba9735b",
         "arm": "legacy-optimistic",
         "task_id": "hp-anc-depth-40",
         "brief": "Wireless noise cancelling headphones for long flights, I need at least 40 dB of cancellation.",
@@ -2257,18 +2257,18 @@
         "purchased_sku": "HP-ANC-TWS-01",
         "expected_sku": "HP-ANC-OVR-01",
         "amount_paise": 539700,
-        "order_id": "order_SIMc3e505d098dc49",
-        "payment_id": "pay_SIMa2521948749642",
+        "order_id": "order_SIM3d929fa4d73144",
+        "payment_id": "pay_SIM6cbe4592f38547",
         "http_calls": 6,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 140.4288001358509,
+        "latency_ms": 133.99500004015863,
         "stages": {
-          "discover_ms": 14.816300012171268,
-          "select_ms": 35.489399917423725,
-          "quote_ms": 13.220399850979447,
+          "discover_ms": 10.392099851742387,
+          "select_ms": 34.13569997064769,
+          "quote_ms": 11.312399990856647,
           "order_ms": 0.0,
-          "pay_ms": 74.8678999952972
+          "pay_ms": 76.39000006020069
         },
         "abstain_reason": "",
         "notes": [
@@ -2276,7 +2276,7 @@
         ]
       },
       {
-        "run_id": "run_d545b0f5f6d8",
+        "run_id": "run_583676dfb446",
         "arm": "legacy-optimistic",
         "task_id": "hp-ldac-overear",
         "brief": "Over ear noise cancelling headphones that support LDAC for hi-res audio.",
@@ -2285,18 +2285,18 @@
         "purchased_sku": "HP-ANC-OVR-01",
         "expected_sku": "HP-ANC-OVR-01",
         "amount_paise": 1060800,
-        "order_id": "order_SIM066b516b58584f",
-        "payment_id": "pay_SIMc0297a1ef07b48",
+        "order_id": "order_SIM68d3f16138c04d",
+        "payment_id": "pay_SIMcbd95b35001743",
         "http_calls": 4,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 145.2786000445485,
+        "latency_ms": 144.6581999771297,
         "stages": {
-          "discover_ms": 11.594600044190884,
-          "select_ms": 11.906499974429607,
-          "quote_ms": 13.276500161737204,
+          "discover_ms": 12.40440015681088,
+          "select_ms": 10.868400102481246,
+          "quote_ms": 13.090899912640452,
           "order_ms": 0.0,
-          "pay_ms": 106.06090002693236
+          "pay_ms": 106.0833998490125
         },
         "abstain_reason": "",
         "notes": [
@@ -2304,7 +2304,7 @@
         ]
       },
       {
-        "run_id": "run_31becc0a8398",
+        "run_id": "run_f3d1e89e2ab2",
         "arm": "legacy-optimistic",
         "task_id": "hp-tws-30h-budget",
         "brief": "ANC earbuds under 5000 rupees with at least 30 hours of total battery.",
@@ -2318,10 +2318,10 @@
         "http_calls": 3,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 45.88410002179444,
+        "latency_ms": 35.74289986863732,
         "stages": {
-          "discover_ms": 15.371499815955758,
-          "select_ms": 27.162800077348948,
+          "discover_ms": 11.828700080513954,
+          "select_ms": 21.36350004002452,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -2330,7 +2330,7 @@
         "notes": []
       },
       {
-        "run_id": "run_c508605e83e9",
+        "run_id": "run_e3f71d233833",
         "arm": "legacy-optimistic",
         "task_id": "ms-silent-office",
         "brief": "A silent click mouse for a shared office, wireless via a USB dongle.",
@@ -2339,24 +2339,24 @@
         "purchased_sku": "MS-OFFICE-SIL-01",
         "expected_sku": "MS-OFFICE-SIL-01",
         "amount_paise": 103100,
-        "order_id": "order_SIM6e398cbd6dd64f",
-        "payment_id": "pay_SIMfc880f7edb7443",
+        "order_id": "order_SIM4e2fc12b4d764b",
+        "payment_id": "pay_SIM67b77220abc846",
         "http_calls": 6,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 161.9396999012679,
+        "latency_ms": 154.08260002732277,
         "stages": {
-          "discover_ms": 13.37259984575212,
-          "select_ms": 39.57789996638894,
-          "quote_ms": 12.042599963024259,
+          "discover_ms": 11.898200027644634,
+          "select_ms": 32.249500043690205,
+          "quote_ms": 11.538600083440542,
           "order_ms": 0.0,
-          "pay_ms": 94.92840012535453
+          "pay_ms": 96.44929994828999
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_dde08f0e4999",
+        "run_id": "run_51647afe76b9",
         "arm": "legacy-optimistic",
         "task_id": "ms-vertical-bt",
         "brief": "Vertical ergonomic mouse for my right hand that pairs over bluetooth.",
@@ -2365,24 +2365,24 @@
         "purchased_sku": "MS-ERGO-VERT-01",
         "expected_sku": "MS-ERGO-VERT-01",
         "amount_paise": 303700,
-        "order_id": "order_SIMccfd4de9e3da4e",
-        "payment_id": "pay_SIMb1978fd373fd4a",
+        "order_id": "order_SIMfa936361c4b74e",
+        "payment_id": "pay_SIM380fbdf97b4d44",
         "http_calls": 6,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 184.08120004460216,
+        "latency_ms": 230.83050013519824,
         "stages": {
-          "discover_ms": 15.822299988940358,
-          "select_ms": 39.52320013195276,
-          "quote_ms": 12.48860009945929,
+          "discover_ms": 18.43699999153614,
+          "select_ms": 59.18020009994507,
+          "quote_ms": 30.207900097593665,
           "order_ms": 0.0,
-          "pay_ms": 113.30439988523722
+          "pay_ms": 119.03889989480376
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_1557f60ccfb9",
+        "run_id": "run_9411838d7bb1",
         "arm": "legacy-optimistic",
         "task_id": "ms-8k-gaming-oos",
         "brief": "High end gaming mouse with 8000 Hz polling and a 20000+ DPI sensor.",
@@ -2396,10 +2396,10 @@
         "http_calls": 4,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 61.970600159838796,
+        "latency_ms": 62.32510018162429,
         "stages": {
-          "discover_ms": 15.807599993422627,
-          "select_ms": 42.92139993049204,
+          "discover_ms": 12.307999888435006,
+          "select_ms": 47.13910003192723,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -2408,7 +2408,7 @@
         "notes": []
       },
       {
-        "run_id": "run_051fda43f8f0",
+        "run_id": "run_a930c9adf24b",
         "arm": "legacy-optimistic",
         "task_id": "mon-4k-usbc",
         "brief": "27 inch 4K monitor that can charge my laptop over USB-C.",
@@ -2417,24 +2417,24 @@
         "purchased_sku": "MON-27-4K-IPS",
         "expected_sku": "MON-27-4K-IPS",
         "amount_paise": 3302800,
-        "order_id": "order_SIM04acb00fcec249",
-        "payment_id": "pay_SIMea4685cc0fbd4a",
+        "order_id": "order_SIMef38541ef0424c",
+        "payment_id": "pay_SIMb0cfa170403b4a",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 134.07210004515946,
+        "latency_ms": 189.60319994948804,
         "stages": {
-          "discover_ms": 13.844599947333336,
-          "select_ms": 25.56769992224872,
-          "quote_ms": 13.894599862396717,
+          "discover_ms": 25.35200002603233,
+          "select_ms": 55.17400009557605,
+          "quote_ms": 25.241299998015165,
           "order_ms": 0.0,
-          "pay_ms": 78.37509992532432
+          "pay_ms": 80.44779999181628
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_eef118a10488",
+        "run_id": "run_8220a6eb2eaf",
         "arm": "legacy-optimistic",
         "task_id": "mon-165hz-qhd",
         "brief": "1440p gaming monitor, at least 144 Hz refresh rate.",
@@ -2443,24 +2443,24 @@
         "purchased_sku": "MON-27-QHD-165",
         "expected_sku": "MON-27-QHD-165",
         "amount_paise": 2594800,
-        "order_id": "order_SIMdc2cd0ae7c4f49",
-        "payment_id": "pay_SIM21a4fedce27a44",
+        "order_id": "order_SIMecd1d76a096442",
+        "payment_id": "pay_SIM462ae43a909c4f",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 126.24760018661618,
+        "latency_ms": 133.4136000368744,
         "stages": {
-          "discover_ms": 12.688799994066358,
-          "select_ms": 25.292200036346912,
-          "quote_ms": 12.058899970725179,
+          "discover_ms": 13.738499954342842,
+          "select_ms": 26.945299934595823,
+          "quote_ms": 14.069600030779839,
           "order_ms": 0.0,
-          "pay_ms": 74.19880013912916
+          "pay_ms": 76.55050000175834
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_3aa640c5ab11",
+        "run_id": "run_383272c53b3d",
         "arm": "legacy-optimistic",
         "task_id": "mon-4k-under-20k",
         "brief": "A 4K monitor under 20000 rupees.",
@@ -2474,10 +2474,10 @@
         "http_calls": 3,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 44.81039987877011,
+        "latency_ms": 60.04630005918443,
         "stages": {
-          "discover_ms": 14.143400127068162,
-          "select_ms": 27.492200024425983,
+          "discover_ms": 15.317300101742148,
+          "select_ms": 35.82710004411638,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -2486,7 +2486,7 @@
         "notes": []
       },
       {
-        "run_id": "run_7c81339160f1",
+        "run_id": "run_297d45763884",
         "arm": "legacy-optimistic",
         "task_id": "dock-dual-hdmi-100w",
         "brief": "USB-C docking station with two HDMI outputs, gigabit ethernet and 100W passthrough charging.",
@@ -2500,10 +2500,10 @@
         "http_calls": 2,
         "payment_attempts": 0,
         "payment_declines": 0,
-        "latency_ms": 28.72240007854998,
+        "latency_ms": 52.56130010820925,
         "stages": {
-          "discover_ms": 13.194300001487136,
-          "select_ms": 12.333699967712164,
+          "discover_ms": 27.784100035205483,
+          "select_ms": 19.719399977475405,
           "quote_ms": 0.0,
           "order_ms": 0.0,
           "pay_ms": 0.0
@@ -2512,7 +2512,7 @@
         "notes": []
       },
       {
-        "run_id": "run_b924a71d0f89",
+        "run_id": "run_8a619406c030",
         "arm": "legacy-optimistic",
         "task_id": "cable-240w-bulk",
         "brief": "Twelve USB-C cables rated for 240W charging, at least 2 metres each.",
@@ -2521,18 +2521,18 @@
         "purchased_sku": "CAB-USBC-2M-240W",
         "expected_sku": "CAB-USBC-2M-240W",
         "amount_paise": 1118600,
-        "order_id": "order_SIM488f6de9e3044d",
-        "payment_id": "pay_SIMc87f1e6d36754f",
+        "order_id": "order_SIM8fa6f250ad7742",
+        "payment_id": "pay_SIMe089f60d9fd54e",
         "http_calls": 6,
         "payment_attempts": 2,
         "payment_declines": 1,
-        "latency_ms": 256.47760019637644,
+        "latency_ms": 264.9324000813067,
         "stages": {
-          "discover_ms": 14.000400202348828,
-          "select_ms": 12.872099876403809,
-          "quote_ms": 13.148800004273653,
+          "discover_ms": 14.785199891775846,
+          "select_ms": 14.475200092419982,
+          "quote_ms": 16.641899943351746,
           "order_ms": 0.0,
-          "pay_ms": 214.39879992976785
+          "pay_ms": 216.21720003895462
         },
         "abstain_reason": "",
         "notes": [
@@ -2541,7 +2541,7 @@
         ]
       },
       {
-        "run_id": "run_b06439df039b",
+        "run_id": "run_5e25c44cc102",
         "arm": "legacy-optimistic",
         "task_id": "kb-red-bulk-shortfall",
         "brief": "Fifteen tenkeyless keyboards with red linear switches for the new lab.",
@@ -2555,13 +2555,13 @@
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 72.81740009784698,
+        "latency_ms": 74.55409993417561,
         "stages": {
-          "discover_ms": 13.342699967324734,
-          "select_ms": 24.676400003954768,
-          "quote_ms": 15.640300000086427,
+          "discover_ms": 11.350699933245778,
+          "select_ms": 30.878599965944886,
+          "quote_ms": 15.389200067147613,
           "order_ms": 0.0,
-          "pay_ms": 15.85309999063611
+          "pay_ms": 13.235399965196848
         },
         "abstain_reason": "checkout did not confirm",
         "notes": [
@@ -2569,7 +2569,7 @@
         ]
       },
       {
-        "run_id": "run_6273e1e61c33",
+        "run_id": "run_e09275b1b3b0",
         "arm": "legacy-optimistic",
         "task_id": "nomatch-numpad",
         "brief": "A standalone wireless numeric keypad with 22 keys.",
@@ -2578,18 +2578,18 @@
         "purchased_sku": "MS-ERGO-VERT-01",
         "expected_sku": null,
         "amount_paise": 303700,
-        "order_id": "order_SIMb0167d692a6044",
-        "payment_id": "pay_SIMd0ba456ea7014f",
+        "order_id": "order_SIM3e20285c265b42",
+        "payment_id": "pay_SIM083c12cd691f4c",
         "http_calls": 6,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 195.910100126639,
+        "latency_ms": 220.48709983937442,
         "stages": {
-          "discover_ms": 15.043599996715784,
-          "select_ms": 45.17900012433529,
-          "quote_ms": 17.121999990195036,
+          "discover_ms": 16.313500003889203,
+          "select_ms": 62.44640005752444,
+          "quote_ms": 21.415199851617217,
           "order_ms": 0.0,
-          "pay_ms": 116.76370003260672
+          "pay_ms": 117.39019979722798
         },
         "abstain_reason": "",
         "notes": [
@@ -2597,7 +2597,7 @@
         ]
       },
       {
-        "run_id": "run_3a2a46be4ab7",
+        "run_id": "run_6f45bd05e1ba",
         "arm": "legacy-optimistic",
         "task_id": "cam-4k-60fps",
         "brief": "A 4K webcam that can record at 60 frames per second.",
@@ -2606,24 +2606,24 @@
         "purchased_sku": "CAM-4K-60",
         "expected_sku": "CAM-4K-60",
         "amount_paise": 1060800,
-        "order_id": "order_SIM9e29445cd5344e",
-        "payment_id": "pay_SIM906174bcc75149",
+        "order_id": "order_SIM358abd6e0e274b",
+        "payment_id": "pay_SIM4cda26e849d343",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 168.24809997342527,
+        "latency_ms": 172.68180008977652,
         "stages": {
-          "discover_ms": 13.851699884980917,
-          "select_ms": 24.52949993312359,
-          "quote_ms": 13.903400162234902,
+          "discover_ms": 14.329300029203296,
+          "select_ms": 28.124500066041946,
+          "quote_ms": 11.623400030657649,
           "order_ms": 0.0,
-          "pay_ms": 113.43899997882545
+          "pay_ms": 115.98589993081987
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_28c8e335b6dd",
+        "run_id": "run_62c1ca3f20e8",
         "arm": "legacy-optimistic",
         "task_id": "cam-wide-fov",
         "brief": "Webcam with a privacy shutter and a wide field of view, at least 85 degrees.",
@@ -2632,18 +2632,18 @@
         "purchased_sku": "CAM-1080-30",
         "expected_sku": "CAM-4K-60",
         "amount_paise": 303700,
-        "order_id": "order_SIM98d6776778ba49",
-        "payment_id": "pay_SIM53e8505a1a064a",
+        "order_id": "order_SIM70e3478e66c844",
+        "payment_id": "pay_SIMa92a347c11174a",
         "http_calls": 7,
         "payment_attempts": 2,
         "payment_declines": 1,
-        "latency_ms": 276.1822999455035,
+        "latency_ms": 275.1706000417471,
         "stages": {
-          "discover_ms": 13.116999994963408,
-          "select_ms": 26.97740006260574,
-          "quote_ms": 15.49030002206564,
+          "discover_ms": 14.629699988290668,
+          "select_ms": 30.196999898180366,
+          "quote_ms": 14.51199990697205,
           "order_ms": 0.0,
-          "pay_ms": 218.7599998433143
+          "pay_ms": 213.67210010066628
         },
         "abstain_reason": "",
         "notes": [
@@ -2652,7 +2652,7 @@
         ]
       },
       {
-        "run_id": "run_7f89bf7102ac",
+        "run_id": "run_3509b817b8ea",
         "arm": "legacy-optimistic",
         "task_id": "cam-1080-budget",
         "brief": "Basic 1080p webcam, under 3000 rupees.",
@@ -2661,18 +2661,18 @@
         "purchased_sku": "CAM-1080-30",
         "expected_sku": "CAM-1080-30",
         "amount_paise": 303700,
-        "order_id": "order_SIM432e6f3bcd4e45",
-        "payment_id": "pay_SIM190b0d26099448",
+        "order_id": "order_SIMcbf66355fb204c",
+        "payment_id": "pay_SIM1c5b6405739944",
         "http_calls": 7,
         "payment_attempts": 2,
         "payment_declines": 1,
-        "latency_ms": 293.05730015039444,
+        "latency_ms": 265.2354999445379,
         "stages": {
-          "discover_ms": 16.331100137904286,
-          "select_ms": 39.4678998272866,
-          "quote_ms": 18.049699952825904,
+          "discover_ms": 14.331999933347106,
+          "select_ms": 23.420099867507815,
+          "quote_ms": 12.723499909043312,
           "order_ms": 0.0,
-          "pay_ms": 217.0371999964118
+          "pay_ms": 212.63870014809072
         },
         "abstain_reason": "",
         "notes": [
@@ -2680,7 +2680,7 @@
         ]
       },
       {
-        "run_id": "run_34587c950c78",
+        "run_id": "run_12ec8ab49f9d",
         "arm": "legacy-optimistic",
         "task_id": "mic-xlr-phantom",
         "brief": "XLR condenser microphone that runs on phantom power.",
@@ -2689,24 +2689,24 @@
         "purchased_sku": "MIC-XLR-COND",
         "expected_sku": "MIC-XLR-COND",
         "amount_paise": 1119800,
-        "order_id": "order_SIM5bc05cbc746943",
-        "payment_id": "pay_SIM1d7d6e57da8b42",
+        "order_id": "order_SIM4a4aebb21cf64c",
+        "payment_id": "pay_SIM64e994d88cbf4d",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 143.54550000280142,
+        "latency_ms": 115.92729995027184,
         "stages": {
-          "discover_ms": 14.906099997460842,
-          "select_ms": 36.099900025874376,
-          "quote_ms": 17.484999960288405,
+          "discover_ms": 11.336300056427717,
+          "select_ms": 20.637799985706806,
+          "quote_ms": 12.76519987732172,
           "order_ms": 0.0,
-          "pay_ms": 72.93420005589724
+          "pay_ms": 69.03430004604161
         },
         "abstain_reason": "",
         "notes": []
       },
       {
-        "run_id": "run_7e4baf577ddf",
+        "run_id": "run_6df0261473fe",
         "arm": "legacy-optimistic",
         "task_id": "mic-usb-monitoring",
         "brief": "USB microphone for podcasting with zero latency headphone monitoring.",
@@ -2715,18 +2715,18 @@
         "purchased_sku": "MIC-USB-CARD",
         "expected_sku": "MIC-USB-CARD",
         "amount_paise": 706800,
-        "order_id": "order_SIM68362678ab6e47",
-        "payment_id": "pay_SIMacdb9b41e20d4e",
+        "order_id": "order_SIM0f9e0c40030b44",
+        "payment_id": "pay_SIM2c83d9a7b66d4f",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 164.02030014432967,
+        "latency_ms": 144.2327001132071,
         "stages": {
-          "discover_ms": 16.240699915215373,
-          "select_ms": 28.717200038954616,
-          "quote_ms": 15.86510008201003,
+          "discover_ms": 12.457699980586767,
+          "select_ms": 23.47739995457232,
+          "quote_ms": 10.970300063490868,
           "order_ms": 0.0,
-          "pay_ms": 101.31300007924438
+          "pay_ms": 95.44320008717477
         },
         "abstain_reason": "",
         "notes": [
@@ -2734,7 +2734,7 @@
         ]
       },
       {
-        "run_id": "run_5ba5fe2b5260",
+        "run_id": "run_846c1ab543e9",
         "arm": "legacy-optimistic",
         "task_id": "mic-boom-trap",
         "brief": "Microphone that ships with a boom arm included.",
@@ -2743,18 +2743,18 @@
         "purchased_sku": "MIC-USB-CARD",
         "expected_sku": null,
         "amount_paise": 706800,
-        "order_id": "order_SIMf5181b8357294d",
-        "payment_id": "pay_SIM2f76f7f3ea6745",
+        "order_id": "order_SIM18fb874041f140",
+        "payment_id": "pay_SIMc2bbd44816654d",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 164.69720005989075,
+        "latency_ms": 153.81930000148714,
         "stages": {
-          "discover_ms": 17.916300101205707,
-          "select_ms": 31.245799968019128,
-          "quote_ms": 14.327000128105283,
+          "discover_ms": 15.145699959248304,
+          "select_ms": 25.829800171777606,
+          "quote_ms": 12.599200010299683,
           "order_ms": 0.0,
-          "pay_ms": 99.32289994321764
+          "pay_ms": 98.22800010442734
         },
         "abstain_reason": "",
         "notes": [
@@ -2762,7 +2762,7 @@
         ]
       },
       {
-        "run_id": "run_0de8853f3b50",
+        "run_id": "run_95cb82248853",
         "arm": "legacy-optimistic",
         "task_id": "ssd-2tb-fast",
         "brief": "Portable 2TB SSD with sequential reads of at least 1500 MB/s.",
@@ -2771,18 +2771,18 @@
         "purchased_sku": "SSD-2TB-NVME",
         "expected_sku": "SSD-2TB-NVME",
         "amount_paise": 1532800,
-        "order_id": "order_SIMd129bf9adbd245",
-        "payment_id": "pay_SIMdd97cb2717be4a",
+        "order_id": "order_SIM3979a9ddfd9e40",
+        "payment_id": "pay_SIMb4a34a8da30b42",
         "http_calls": 5,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 183.24490007944405,
+        "latency_ms": 166.00569989532232,
         "stages": {
-          "discover_ms": 17.691500019282103,
-          "select_ms": 26.072199922055006,
-          "quote_ms": 15.02930000424385,
+          "discover_ms": 12.124799890443683,
+          "select_ms": 22.964600007981062,
+          "quote_ms": 11.830700095742941,
           "order_ms": 0.0,
-          "pay_ms": 122.48879997059703
+          "pay_ms": 117.16159991919994
         },
         "abstain_reason": "",
         "notes": [
@@ -2790,7 +2790,7 @@
         ]
       },
       {
-        "run_id": "run_8400b3ef6084",
+        "run_id": "run_b6c815819d4a",
         "arm": "legacy-optimistic",
         "task_id": "ssd-encrypted-1tb",
         "brief": "1TB portable SSD with hardware AES encryption.",
@@ -2799,18 +2799,18 @@
         "purchased_sku": "SSD-1TB-NVME",
         "expected_sku": "SSD-1TB-NVME",
         "amount_paise": 883800,
-        "order_id": "order_SIM6928dc78c74747",
-        "payment_id": "pay_SIM8b047eff86ab48",
+        "order_id": "order_SIM37139333c0344a",
+        "payment_id": "pay_SIMb162c7a202014a",
         "http_calls": 7,
         "payment_attempts": 2,
         "payment_declines": 1,
-        "latency_ms": 282.951699802652,
+        "latency_ms": 259.77159989997745,
         "stages": {
-          "discover_ms": 15.771699836477637,
-          "select_ms": 33.91840006224811,
-          "quote_ms": 14.915999956429005,
+          "discover_ms": 13.240200001746416,
+          "select_ms": 22.8299000300467,
+          "quote_ms": 12.814800022169948,
           "order_ms": 0.0,
-          "pay_ms": 214.25269986502826
+          "pay_ms": 208.89059989713132
         },
         "abstain_reason": "",
         "notes": [
@@ -2819,7 +2819,7 @@
         ]
       },
       {
-        "run_id": "run_c5c60c629d79",
+        "run_id": "run_b64b70b520a0",
         "arm": "legacy-optimistic",
         "task_id": "ssd-3000-read-trap",
         "brief": "Portable SSD reading at 3000 MB/s or faster.",
@@ -2828,18 +2828,18 @@
         "purchased_sku": "SSD-1TB-NVME",
         "expected_sku": null,
         "amount_paise": 883800,
-        "order_id": "order_SIMc56b240b9d114f",
-        "payment_id": "pay_SIM80cb900b63054a",
+        "order_id": "order_SIMbf2f883d51f343",
+        "payment_id": "pay_SIMc77d8bf41d674b",
         "http_calls": 7,
         "payment_attempts": 2,
         "payment_declines": 1,
-        "latency_ms": 275.2854998689145,
+        "latency_ms": 259.7008999437094,
         "stages": {
-          "discover_ms": 14.252200024202466,
-          "select_ms": 26.6913000959903,
-          "quote_ms": 13.133900007233024,
+          "discover_ms": 15.72000002488494,
+          "select_ms": 23.273900151252747,
+          "quote_ms": 11.49150007404387,
           "order_ms": 0.0,
-          "pay_ms": 218.90150010585785
+          "pay_ms": 207.10780005902052
         },
         "abstain_reason": "",
         "notes": [
@@ -2848,7 +2848,7 @@
         ]
       },
       {
-        "run_id": "run_a8915bde21e9",
+        "run_id": "run_8b1b669f4943",
         "arm": "legacy-optimistic",
         "task_id": "ssd-ambiguous",
         "brief": "Portable SSD with hardware encryption and a shock rating.",
@@ -2857,18 +2857,18 @@
         "purchased_sku": "SSD-1TB-NVME",
         "expected_sku": null,
         "amount_paise": 883800,
-        "order_id": "order_SIM174f9ce6eef44a",
-        "payment_id": "pay_SIMac3963925b5045",
+        "order_id": "order_SIMd44ef010e21743",
+        "payment_id": "pay_SIMc781ba3b061f4e",
         "http_calls": 7,
         "payment_attempts": 2,
         "payment_declines": 1,
-        "latency_ms": 276.2054998893291,
+        "latency_ms": 271.09099994413555,
         "stages": {
-          "discover_ms": 14.08270001411438,
-          "select_ms": 30.52069991827011,
-          "quote_ms": 14.964899979531765,
+          "discover_ms": 11.239999905228615,
+          "select_ms": 25.85269999690354,
+          "quote_ms": 12.075699865818024,
           "order_ms": 0.0,
-          "pay_ms": 214.34650011360645
+          "pay_ms": 219.75079993717372
         },
         "abstain_reason": "",
         "notes": [
@@ -2877,7 +2877,7 @@
         ]
       },
       {
-        "run_id": "run_21748d4ff99c",
+        "run_id": "run_634b46fa5c25",
         "arm": "legacy-optimistic",
         "task_id": "stand-alu-8kg",
         "brief": "Adjustable aluminium laptop stand rated to hold at least 8 kg.",
@@ -2886,18 +2886,18 @@
         "purchased_sku": "STAND-ALU-ADJ",
         "expected_sku": "STAND-ALU-ADJ",
         "amount_paise": 362700,
-        "order_id": "order_SIM83c0e414968349",
-        "payment_id": "pay_SIM5f360817df4648",
+        "order_id": "order_SIM7498574fc9254b",
+        "payment_id": "pay_SIMe7c42728bd7240",
         "http_calls": 4,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 134.9371001124382,
+        "latency_ms": 171.54450016096234,
         "stages": {
-          "discover_ms": 14.678600011393428,
-          "select_ms": 13.3714999537915,
-          "quote_ms": 14.356100000441074,
+          "discover_ms": 24.186299880966544,
+          "select_ms": 22.164700087159872,
+          "quote_ms": 27.52809994854033,
           "order_ms": 0.0,
-          "pay_ms": 90.03780013881624
+          "pay_ms": 93.92359992489219
         },
         "abstain_reason": "",
         "notes": [
@@ -2905,7 +2905,7 @@
         ]
       },
       {
-        "run_id": "run_ae81bd9605fa",
+        "run_id": "run_7bd0bcc134d5",
         "arm": "legacy-optimistic",
         "task_id": "hub-powered-trap",
         "brief": "A four port USB-A hub with its own external power supply.",
@@ -2914,18 +2914,18 @@
         "purchased_sku": "HUB-USBA-4P",
         "expected_sku": null,
         "amount_paise": 162100,
-        "order_id": "order_SIMa9831e85149f42",
-        "payment_id": "pay_SIM738ad4b32da54a",
+        "order_id": "order_SIMb30503d5679a46",
+        "payment_id": "pay_SIMbb4c83590b2a43",
         "http_calls": 4,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 144.01160017587245,
+        "latency_ms": 145.26570006273687,
         "stages": {
-          "discover_ms": 14.01160005480051,
-          "select_ms": 14.295600121840835,
-          "quote_ms": 12.265500146895647,
+          "discover_ms": 14.89129988476634,
+          "select_ms": 11.99060003273189,
+          "quote_ms": 12.871100101619959,
           "order_ms": 0.0,
-          "pay_ms": 101.51230008341372
+          "pay_ms": 102.80079999938607
         },
         "abstain_reason": "",
         "notes": [
@@ -2933,7 +2933,7 @@
         ]
       },
       {
-        "run_id": "run_3df97e3fe368",
+        "run_id": "run_fb47062ca59f",
         "arm": "legacy-optimistic",
         "task_id": "kvm-4k-2port",
         "brief": "Two port KVM switch that supports 4K output.",
@@ -2942,18 +2942,18 @@
         "purchased_sku": "KVM-2P-4K",
         "expected_sku": "KVM-2P-4K",
         "amount_paise": 539700,
-        "order_id": "order_SIMa7ff0a8cef9b47",
-        "payment_id": "pay_SIM3abca80f284d40",
+        "order_id": "order_SIM96485436c99544",
+        "payment_id": "pay_SIMc44c2df5a5d84a",
         "http_calls": 4,
         "payment_attempts": 1,
         "payment_declines": 0,
-        "latency_ms": 120.1528999954462,
+        "latency_ms": 116.35310016572475,
         "stages": {
-          "discover_ms": 12.99980003386736,
-          "select_ms": 11.721600079908967,
-          "quote_ms": 15.54049993865192,
+          "discover_ms": 11.696799891069531,
+          "select_ms": 11.902200058102608,
+          "quote_ms": 12.231200002133846,
           "order_ms": 0.0,
-          "pay_ms": 77.61620008386672
+          "pay_ms": 78.59209994785488
         },
         "abstain_reason": "",
         "notes": []

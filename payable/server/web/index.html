@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payable — a merchant transactability layer for AI buyers</title>
+<meta name="description" content="Turns a Razorpay merchant's catalog into an agent-callable, auditable commerce interface — and benchmarks whether it works.">
+<link rel="stylesheet" href="/static/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#129534;</text></svg>">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <div class="brand">Pay<span>able</span></div>
+    <nav class="links">
+      <a href="#demo">Live demo</a>
+      <a href="#benchmark">Benchmark</a>
+      <a href="#catalog">Catalog</a>
+      <a href="/docs">API</a>
+      <a href="/.well-known/payable.json">Manifest</a>
+      <a href="/legacy/">Control storefront</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>A merchant that an AI buyer can actually transact with.</h1>
+    <p class="lede">
+      Structured search that answers in <strong>constraints</strong>, spending
+      <strong>mandates signed with Ed25519</strong> that the merchant verifies before an order
+      exists, Razorpay order and payment, and an <strong>append-only audit log</strong> of every
+      decision either side made.
+    </p>
+    <p class="lede">
+      Then the part that matters: a benchmark measuring whether any of it helps, against the
+      same shop rendered as an ordinary HTML storefront.
+    </p>
+    <div class="metrics" id="hero-metrics">
+      <div class="metric"><div class="k">loading</div><div class="v">—</div><div class="s">benchmark results</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="demo">
+  <div class="wrap">
+    <h2>Live demo</h2>
+    <p class="sub">
+      This runs the real agent against the real merchant over HTTP — not a recording. Pick a task,
+      pick which surface the buyer has to work with, and watch what it decides. The most
+      interesting outcome is usually the one where it refuses to buy.
+    </p>
+
+    <div class="demo-grid">
+      <div class="panel">
+        <h3>Buyer task</h3>
+
+        <label class="field">
+          <span class="lab">Preset</span>
+          <select id="preset"></select>
+        </label>
+
+        <label class="field">
+          <span class="lab">Brief (what the human asked for)</span>
+          <textarea id="brief"></textarea>
+        </label>
+
+        <div id="constraint-view" style="margin-bottom:14px">
+          <span class="lab" style="display:block;font-size:12px;color:var(--muted);margin-bottom:5px">
+            Machine-checkable constraints
+          </span>
+          <div class="constraint-list" id="chips"></div>
+        </div>
+
+        <label class="field">
+          <span class="lab">Budget (₹, incl. GST &amp; shipping)</span>
+          <input type="number" id="budget" min="0" step="1">
+        </label>
+
+        <h3 style="margin-top:22px">Merchant surface</h3>
+        <div class="arms" id="arms">
+          <label class="arm-opt sel">
+            <input type="radio" name="arm" value="payable" checked>
+            <span>
+              <span class="nm">payable</span>
+              <span class="ds">Structured MCP tools. Cautious buyer that honours the merchant's advisories.</span>
+            </span>
+          </label>
+          <label class="arm-opt">
+            <input type="radio" name="arm" value="legacy-strict">
+            <span>
+              <span class="nm">legacy-strict</span>
+              <span class="ds">HTML storefront. Same cautious buyer — it abstains when it cannot verify a spec.</span>
+            </span>
+          </label>
+          <label class="arm-opt">
+            <input type="radio" name="arm" value="legacy-optimistic">
+            <span>
+              <span class="nm">legacy-optimistic</span>
+              <span class="ds">HTML storefront. Buys anyway when it cannot verify. This is where money is lost.</span>
+            </span>
+          </label>
+        </div>
+
+        <button class="run" id="run">Run the agent</button>
+      </div>
+
+      <div class="panel" id="out">
+        <div class="empty">Run a task to see the agent's decisions, its audit trail, and whether it got it right.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="benchmark">
+  <div class="wrap">
+    <h2>Benchmark</h2>
+    <p class="sub">
+      Every task above, run against all three surfaces and repeated across five payment seeds.
+      Identical tasks, identical inventory, and declines seeded on the purchase so every arm meets
+      the same failures at the same points.
+    </p>
+    <div id="bench">
+      <div class="empty">Loading benchmark results…</div>
+    </div>
+  </div>
+</section>
+
+<section id="catalog">
+  <div class="wrap">
+    <h2>Catalog</h2>
+    <p class="sub">
+      The same inventory behind all three surfaces. Structured here; prose bullets on the
+      <a href="/legacy/">control storefront</a>. That difference is the whole experiment.
+    </p>
+    <div class="filters" id="filters"></div>
+    <div class="cards" id="cards"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <a href="https://github.com/Artic853/payable">GitHub</a>
+      <a href="/docs">OpenAPI</a>
+      <a href="/.well-known/agent-card.json">A2A agent card</a>
+      <a href="/catalog.jsonld">JSON-LD feed</a>
+      <a href="/api/principals">Key registry</a>
+      <a href="/api/audit/runs">Audit log</a>
+      <a href="/health">Health</a>
+    </div>
+    <div id="cfg" class="mono" style="font-size:12px"></div>
+    <p style="margin-top:14px;max-width:76ch">
+      Razorpay order creation is real against test mode when credentials are set. Capture needs
+      hosted checkout and a payer, so that leg is simulated and labelled as such — nothing in the
+      audit log claims a capture that did not happen.
+    </p>
+  </div>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

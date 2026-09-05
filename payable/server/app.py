@@ -14,10 +14,12 @@ from __future__ import annotations
 
 import time
 import uuid
+from pathlib import Path
 from typing import Any
 
 from fastapi import Body, FastAPI, HTTPException, Request
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 
 from ..audit import AUDIT
 from ..catalog import CATALOG
@@ -26,6 +28,7 @@ from ..config import SETTINGS
 from ..mandate import ALG_ED25519, ALG_HMAC, ED25519_AVAILABLE, KEYRING, issue_mandate
 from ..models import Mandate, SearchRequest
 from . import mcp_http
+from .console_api import router as console_router
 from .legacy import router as legacy_router
 
 app = FastAPI(
@@ -34,6 +37,10 @@ app = FastAPI(
     version="0.1.0",
 )
 app.include_router(legacy_router)
+app.include_router(console_router)
+
+WEB_DIR = Path(__file__).resolve().parent / "web"
+app.mount("/static", StaticFiles(directory=WEB_DIR), name="static")
 
 
 # --------------------------------------------------------------------------
@@ -318,29 +325,7 @@ def health() -> dict:
     return {"status": "ok", "ts": time.time(), "config": SETTINGS.describe()}
 
 
-@app.get("/", response_class=HTMLResponse, tags=["ops"])
-def index() -> HTMLResponse:
-    cfg = SETTINGS.describe()
-    rows = "".join(f"<tr><td>{k}</td><td><code>{v}</code></td></tr>" for k, v in cfg.items())
-    links = [
-        ("/.well-known/payable.json", "capability manifest"),
-        ("/.well-known/agent-card.json", "A2A agent card"),
-        ("/catalog.jsonld", "schema.org catalog feed"),
-        ("/mcp/tools", "MCP tool definitions"),
-        ("/api/audit/runs", "audit log — recent runs"),
-        ("/legacy/", "control arm: plain HTML storefront"),
-        ("/docs", "OpenAPI docs"),
-    ]
-    link_rows = "".join(f"<li><a href='{href}'>{href}</a> — {label}</li>" for href, label in links)
-    return HTMLResponse(
-        "<!doctype html><meta charset='utf-8'><title>Payable</title>"
-        "<style>body{font-family:system-ui,Segoe UI,Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;color:#1a1a1a}"
-        "code{background:#f2f0ec;padding:2px 6px;border-radius:4px}"
-        "table{border-collapse:collapse;margin:12px 0}td{padding:5px 16px 5px 0;border-bottom:1px solid #eee}"
-        "li{line-height:1.9}</style>"
-        "<h1>Payable</h1>"
-        f"<p>Merchant transactability layer for <b>{CATALOG.merchant.display_name}</b> "
-        f"({len(CATALOG.products)} SKUs).</p>"
-        f"<h3>Active backends</h3><table>{rows}</table>"
-        f"<h3>Surfaces</h3><ul>{link_rows}</ul>"
-    )
+@app.get("/", tags=["ops"])
+def index() -> FileResponse:
+    """The web console: live agent demo, benchmark results, catalog browser."""
+    return FileResponse(WEB_DIR / "index.html", media_type="text/html")
